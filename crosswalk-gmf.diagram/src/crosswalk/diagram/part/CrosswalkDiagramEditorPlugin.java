@@ -31,6 +31,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory;
 import org.eclipse.emf.ecore.resource.impl.ResourceImpl;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
@@ -284,14 +285,13 @@ public class CrosswalkDiagramEditorPlugin extends AbstractUIPlugin {
 		} else {
 			this.dictionaries = new ArrayList<Dictionary>();
 		}
-		ResourceSet resourceSet = new ResourceSetImpl();
+		GMFResourceFactory rf = new GMFResourceFactory();
 		for (URI loc : DictionaryPreference.getLocations()) {
 			String uri = loc.toString();
 			Resource metsResource = null;
 			try {
 				logInfo("METS attempting to load existing file:" + uri);
-				metsResource = resourceSet
-						.getResource(URI.createURI(uri), true);
+				metsResource = rf.createResource(URI.createURI(uri));
 				((ResourceImpl) metsResource)
 						.setIntrinsicIDToEObjectMap(new HashMap());
 				metsResource.load(xmlOptions);
