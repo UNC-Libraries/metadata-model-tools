@@ -118,14 +118,6 @@
 				<configuration>
 					<resolver>p2</resolver>
 					<ignoreTychoRepositories>true</ignoreTychoRepositories>
-					<target>
-						<artifact>
-							<groupId>curators.workbench</groupId>
-							<artifactId>target-definition</artifactId>
-							<version>${project.version}</version>
-							<classifier>indigo</classifier>
-						</artifact>
-					</target>
 					<pomDependencies>consider</pomDependencies>
 					<environments>
 						<environment>
