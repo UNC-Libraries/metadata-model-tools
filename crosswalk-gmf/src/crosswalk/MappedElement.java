@@ -16,6 +16,7 @@
 package crosswalk;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 
 /**
@@ -30,6 +31,7 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>{@link crosswalk.MappedElement#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link crosswalk.MappedElement#getMappedFeature <em>Mapped Feature</em>}</li>
  *   <li>{@link crosswalk.MappedElement#getParent <em>Parent</em>}</li>
+ *   <li>{@link crosswalk.MappedElement#getGeneratedFeature <em>Generated Feature</em>}</li>
  * </ul>
  * </p>
  *
@@ -125,5 +127,31 @@ public interface MappedElement extends OutputElement {
 	 * @generated
 	 */
         void setParent(MappedElement value);
+
+								/**
+	 * Returns the value of the '<em><b>Generated Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Generated Feature</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Generated Feature</em>' reference.
+	 * @see #setGeneratedFeature(EObject)
+	 * @see crosswalk.CrosswalkPackage#getMappedElement_GeneratedFeature()
+	 * @model
+	 * @generated
+	 */
+	EObject getGeneratedFeature();
+
+								/**
+	 * Sets the value of the '{@link crosswalk.MappedElement#getGeneratedFeature <em>Generated Feature</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Generated Feature</em>' reference.
+	 * @see #getGeneratedFeature()
+	 * @generated
+	 */
+	void setGeneratedFeature(EObject value);
 
 } // MappedElement

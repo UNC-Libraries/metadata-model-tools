@@ -55,6 +55,8 @@ import crosswalk.Form;
 import crosswalk.FormElement;
 import crosswalk.Input;
 import crosswalk.InputField;
+import crosswalk.MajorBlock;
+import crosswalk.MajorEntry;
 import crosswalk.MappedAttribute;
 import crosswalk.MappedElement;
 import crosswalk.MappingContainer;
@@ -303,6 +305,20 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 	 * @generated
 	 */
 	private EClass formEClass = null;
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass majorBlockEClass = null;
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass majorEntryEClass = null;
 
 								/**
 	 * <!-- begin-user-doc -->
@@ -866,6 +882,15 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 
         /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMappedElement_GeneratedFeature() {
+		return (EReference)mappedElementEClass.getEStructuralFeatures().get(4);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -1346,6 +1371,96 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMajorBlock() {
+		return majorBlockEClass;
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMajorBlock_Label() {
+		return (EAttribute)majorBlockEClass.getEStructuralFeatures().get(0);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMajorBlock_SelectedMajorIndex() {
+		return (EAttribute)majorBlockEClass.getEStructuralFeatures().get(1);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMajorBlock_MajorEntries() {
+		return (EReference)majorBlockEClass.getEStructuralFeatures().get(2);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMajorBlock_NameElement() {
+		return (EReference)majorBlockEClass.getEStructuralFeatures().get(3);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMajorEntry() {
+		return majorEntryEClass;
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMajorEntry_Name() {
+		return (EAttribute)majorEntryEClass.getEStructuralFeatures().get(0);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMajorEntry_ObserverGroups() {
+		return (EAttribute)majorEntryEClass.getEStructuralFeatures().get(1);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMajorEntry_ReviewerGroups() {
+		return (EAttribute)majorEntryEClass.getEStructuralFeatures().get(2);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMajorEntry_EmailDepositNoticeTo() {
+		return (EAttribute)majorEntryEClass.getEStructuralFeatures().get(3);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFormElement() {
 		return formElementEClass;
 	}
@@ -1716,6 +1831,7 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 		createEReference(mappedElementEClass, MAPPED_ELEMENT__ATTRIBUTES);
 		createEReference(mappedElementEClass, MAPPED_ELEMENT__MAPPED_FEATURE);
 		createEReference(mappedElementEClass, MAPPED_ELEMENT__PARENT);
+		createEReference(mappedElementEClass, MAPPED_ELEMENT__GENERATED_FEATURE);
 
 		mappedAttributeEClass = createEClass(MAPPED_ATTRIBUTE);
 		createEReference(mappedAttributeEClass, MAPPED_ATTRIBUTE__MAPPED_FEATURE);
@@ -1781,6 +1897,18 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 		createEAttribute(formEClass, FORM__CONTACT_NAME);
 		createEAttribute(formEClass, FORM__CONTACT_EMAIL);
 		createEAttribute(formEClass, FORM__LOGO);
+
+		majorBlockEClass = createEClass(MAJOR_BLOCK);
+		createEAttribute(majorBlockEClass, MAJOR_BLOCK__LABEL);
+		createEAttribute(majorBlockEClass, MAJOR_BLOCK__SELECTED_MAJOR_INDEX);
+		createEReference(majorBlockEClass, MAJOR_BLOCK__MAJOR_ENTRIES);
+		createEReference(majorBlockEClass, MAJOR_BLOCK__NAME_ELEMENT);
+
+		majorEntryEClass = createEClass(MAJOR_ENTRY);
+		createEAttribute(majorEntryEClass, MAJOR_ENTRY__NAME);
+		createEAttribute(majorEntryEClass, MAJOR_ENTRY__OBSERVER_GROUPS);
+		createEAttribute(majorEntryEClass, MAJOR_ENTRY__REVIEWER_GROUPS);
+		createEAttribute(majorEntryEClass, MAJOR_ENTRY__EMAIL_DEPOSIT_NOTICE_TO);
 
 		formElementEClass = createEClass(FORM_ELEMENT);
 
@@ -1893,6 +2021,7 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 		mappingContainerEClass.getESuperTypes().add(this.getContextProvider());
 		formEClass.getESuperTypes().add(this.getEditable());
 		formEClass.getESuperTypes().add(this.getContextProvider());
+		majorBlockEClass.getESuperTypes().add(this.getFormElement());
 		fileBlockEClass.getESuperTypes().add(this.getFormElement());
 		paragraphEClass.getESuperTypes().add(this.getFormElement());
 		g1 = createEGenericType(this.getInputField());
@@ -2002,6 +2131,7 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 		initEReference(getMappedElement_Attributes(), this.getMappedAttribute(), null, "attributes", null, 0, -1, MappedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMappedElement_MappedFeature(), ecorePackage.getEReference(), null, "mappedFeature", null, 1, 1, MappedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMappedElement_Parent(), this.getMappedElement(), this.getMappedElement_ChildElements(), "parent", null, 0, 1, MappedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMappedElement_GeneratedFeature(), ecorePackage.getEObject(), null, "generatedFeature", null, 0, 1, MappedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mappedAttributeEClass, MappedAttribute.class, "MappedAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMappedAttribute_MappedFeature(), ecorePackage.getEAttribute(), null, "mappedFeature", null, 1, 1, MappedAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2078,6 +2208,22 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 		initEAttribute(getForm_ContactName(), ecorePackage.getEString(), "contactName", null, 0, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getForm_ContactEmail(), ecorePackage.getEString(), "contactEmail", null, 0, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getForm_Logo(), this.getURI(), "logo", null, 0, 1, Form.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(formEClass, ecorePackage.getEString(), "getUnifiedEmailDepositNoticeTo", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(majorBlockEClass, MajorBlock.class, "MajorBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMajorBlock_Label(), ecorePackage.getEString(), "label", null, 1, 1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMajorBlock_SelectedMajorIndex(), ecorePackage.getEInt(), "selectedMajorIndex", null, 0, 1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMajorBlock_MajorEntries(), this.getMajorEntry(), null, "majorEntries", null, 1, -1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMajorBlock_NameElement(), this.getMappedElement(), null, "nameElement", null, 1, 1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(majorBlockEClass, this.getMajorEntry(), "getSelectedMajor", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(majorEntryEClass, MajorEntry.class, "MajorEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMajorEntry_Name(), ecorePackage.getEString(), "name", null, 0, 1, MajorEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMajorEntry_ObserverGroups(), ecorePackage.getEString(), "observerGroups", null, 0, -1, MajorEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMajorEntry_ReviewerGroups(), ecorePackage.getEString(), "reviewerGroups", null, 0, -1, MajorEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMajorEntry_EmailDepositNoticeTo(), ecorePackage.getEString(), "emailDepositNoticeTo", null, 0, -1, MajorEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(formElementEClass, FormElement.class, "FormElement", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

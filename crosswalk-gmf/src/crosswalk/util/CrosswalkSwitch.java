@@ -296,6 +296,19 @@ public class CrosswalkSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CrosswalkPackage.MAJOR_BLOCK: {
+				MajorBlock majorBlock = (MajorBlock)theEObject;
+				T result = caseMajorBlock(majorBlock);
+				if (result == null) result = caseFormElement(majorBlock);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CrosswalkPackage.MAJOR_ENTRY: {
+				MajorEntry majorEntry = (MajorEntry)theEObject;
+				T result = caseMajorEntry(majorEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CrosswalkPackage.FORM_ELEMENT: {
 				FormElement formElement = (FormElement)theEObject;
 				T result = caseFormElement(formElement);
@@ -774,6 +787,36 @@ public class CrosswalkSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseForm(Form object) {
+		return null;
+	}
+
+								/**
+	 * Returns the result of interpreting the object as an instance of '<em>Major Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Major Block</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMajorBlock(MajorBlock object) {
+		return null;
+	}
+
+								/**
+	 * Returns the result of interpreting the object as an instance of '<em>Major Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Major Entry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMajorEntry(MajorEntry object) {
 		return null;
 	}
 

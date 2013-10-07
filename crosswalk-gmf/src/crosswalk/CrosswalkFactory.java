@@ -206,6 +206,24 @@ public interface CrosswalkFactory extends EFactory {
 	Form createForm();
 
 								/**
+	 * Returns a new object of class '<em>Major Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Major Block</em>'.
+	 * @generated
+	 */
+	MajorBlock createMajorBlock();
+
+								/**
+	 * Returns a new object of class '<em>Major Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Major Entry</em>'.
+	 * @generated
+	 */
+	MajorEntry createMajorEntry();
+
+								/**
 	 * Returns a new object of class '<em>File Block</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

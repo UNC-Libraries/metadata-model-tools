@@ -448,6 +448,11 @@ public class FormItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(CrosswalkPackage.Literals.FORM__ELEMENTS,
+				 CrosswalkFactory.eINSTANCE.createMajorBlock()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrosswalkPackage.Literals.FORM__ELEMENTS,
 				 CrosswalkFactory.eINSTANCE.createFileBlock()));
 
 		newChildDescriptors.add

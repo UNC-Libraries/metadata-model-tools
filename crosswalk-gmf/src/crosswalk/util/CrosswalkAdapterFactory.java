@@ -197,6 +197,14 @@ public class CrosswalkAdapterFactory extends AdapterFactoryImpl {
 				return createFormAdapter();
 			}
 			@Override
+			public Adapter caseMajorBlock(MajorBlock object) {
+				return createMajorBlockAdapter();
+			}
+			@Override
+			public Adapter caseMajorEntry(MajorEntry object) {
+				return createMajorEntryAdapter();
+			}
+			@Override
 			public Adapter caseFormElement(FormElement object) {
 				return createFormElementAdapter();
 			}
@@ -643,6 +651,34 @@ public class CrosswalkAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFormAdapter() {
+		return null;
+	}
+
+								/**
+	 * Creates a new adapter for an object of class '{@link crosswalk.MajorBlock <em>Major Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crosswalk.MajorBlock
+	 * @generated
+	 */
+	public Adapter createMajorBlockAdapter() {
+		return null;
+	}
+
+								/**
+	 * Creates a new adapter for an object of class '{@link crosswalk.MajorEntry <em>Major Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crosswalk.MajorEntry
+	 * @generated
+	 */
+	public Adapter createMajorEntryAdapter() {
 		return null;
 	}
 
