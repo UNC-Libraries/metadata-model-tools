@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/mmt-feature_4.1.4.qualifier.jar" id="mmt-feature" version="4.1.4.qualifier">
+      <category name="metadata-model-tools"/>
+   </feature>
+   <category-def name="metadata-model-tools" label="Metadata Model Tools"/>
+</site>
