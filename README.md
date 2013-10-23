@@ -20,10 +20,9 @@ Developer Eclipse IDE Setup
   * m2e-egit Maven SCM Handler for EGit 
 1. Import Maven Projects from SCM
 1. Select git and this project URL.
-1. Open the current target-definition file. (As on this writing, target-definition\indigo_3_8.target)
+1. Open the target-definition file. (As on this writing, parent/target-definition/indigo_3_8.target)
 1. Click on "Set as Target Platform" in the upper right.
-1. To fix logging classpath markers, maven install these subprojects:
- * org.apache.log4j12
- * org.slf4j.log4j12
-1. To enable PDE logging via SLF4J, maven install this one too:
- * org.slf4j.pde
+
+The latest release of this project is available as a P2 update site:
+
+http://www2.lib.unc.edu/software/workbench/p2/metadata-model-tools/
