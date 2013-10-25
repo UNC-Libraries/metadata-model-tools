@@ -219,6 +219,11 @@ public class DictionaryItemProvider
 			(createChildParameter
 				(CrosswalkPackage.Literals.DICTIONARY__BLOCKS,
 				 CrosswalkFactory.eINSTANCE.createMetadataBlock()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CrosswalkPackage.Literals.DICTIONARY__BLOCKS,
+				 CrosswalkFactory.eINSTANCE.createFileBlock()));
 	}
 
 }

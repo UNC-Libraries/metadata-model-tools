@@ -17,6 +17,8 @@
  */
 package crosswalk;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -26,12 +28,10 @@ package crosswalk;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link crosswalk.FileBlock#getName <em>Name</em>}</li>
- *   <li>{@link crosswalk.FileBlock#getDescription <em>Description</em>}</li>
  *   <li>{@link crosswalk.FileBlock#getUsage <em>Usage</em>}</li>
  *   <li>{@link crosswalk.FileBlock#getLabel <em>Label</em>}</li>
- *   <li>{@link crosswalk.FileBlock#isRequired <em>Required</em>}</li>
  *   <li>{@link crosswalk.FileBlock#isDefaultAccess <em>Default Access</em>}</li>
+ *   <li>{@link crosswalk.FileBlock#getCopyGrantsHavingRoles <em>Copy Grants Having Roles</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,59 +39,7 @@ package crosswalk;
  * @model
  * @generated
  */
-public interface FileBlock extends FormElement {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see crosswalk.CrosswalkPackage#getFileBlock_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link crosswalk.FileBlock#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see crosswalk.CrosswalkPackage#getFileBlock_Description()
-	 * @model
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link crosswalk.FileBlock#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
-
+public interface FileBlock extends MetadataBlock {
 	/**
 	 * Returns the value of the '<em><b>Usage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -145,32 +93,6 @@ public interface FileBlock extends FormElement {
 	void setLabel(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Required</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Required</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required</em>' attribute.
-	 * @see #setRequired(boolean)
-	 * @see crosswalk.CrosswalkPackage#getFileBlock_Required()
-	 * @model required="true"
-	 * @generated
-	 */
-	boolean isRequired();
-
-	/**
-	 * Sets the value of the '{@link crosswalk.FileBlock#isRequired <em>Required</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Required</em>' attribute.
-	 * @see #isRequired()
-	 * @generated
-	 */
-	void setRequired(boolean value);
-
-	/**
 	 * Returns the value of the '<em><b>Default Access</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
@@ -196,5 +118,21 @@ public interface FileBlock extends FormElement {
 	 * @generated
 	 */
 	void setDefaultAccess(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Copy Grants Having Roles</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Copy Grants Having Roles</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Copy Grants Having Roles</em>' attribute list.
+	 * @see crosswalk.CrosswalkPackage#getFileBlock_CopyGrantsHavingRoles()
+	 * @model default=""
+	 * @generated
+	 */
+	EList<String> getCopyGrantsHavingRoles();
 
 } // FileBlock

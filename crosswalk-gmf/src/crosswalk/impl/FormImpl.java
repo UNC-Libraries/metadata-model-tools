@@ -474,30 +474,6 @@ public class FormImpl extends EObjectImpl implements Form {
 		}
 		return emailDepositNoticeTo;
 	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public EList<String> getUnifiedEmailDepositNoticeTo() {
-		EList<String> additionalEmails = null;
-		for (FormElement element : this.elements) {
-			if (element instanceof MajorBlock) {
-				if (additionalEmails == null)
-					additionalEmails = new EDataTypeUniqueEList<String>(String.class, this, CrosswalkPackage.FORM__EMAIL_DEPOSIT_NOTICE_TO);
-				MajorEntry major = ((MajorBlock) element).getSelectedMajor();
-				if (major != null)
-					additionalEmails.addAll(major.getEmailDepositNoticeTo());
-			}
-		}
-		if (additionalEmails == null)
-			return emailDepositNoticeTo;
-		if (emailDepositNoticeTo == null)
-			return additionalEmails;
-		additionalEmails.addAll(emailDepositNoticeTo);
-		return additionalEmails;
-	}
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -324,6 +324,11 @@ public class MetadataBlockItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(CrosswalkPackage.Literals.MAPPING_CONTAINER__ELEMENTS,
+				 CrosswalkFactory.eINSTANCE.createFileBlock()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(CrosswalkPackage.Literals.METADATA_BLOCK__PORTS,
 				 CrosswalkFactory.eINSTANCE.createInputField()));
 

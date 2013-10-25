@@ -263,6 +263,15 @@ public class CrosswalkSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CrosswalkPackage.EMAIL_INPUT_FIELD: {
+				EmailInputField emailInputField = (EmailInputField)theEObject;
+				T result = caseEmailInputField(emailInputField);
+				if (result == null) result = caseInputField(emailInputField);
+				if (result == null) result = caseOutput(emailInputField);
+				if (result == null) result = caseInput(emailInputField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case CrosswalkPackage.CONTEXT_PROVIDER: {
 				ContextProvider contextProvider = (ContextProvider)theEObject;
 				T result = caseContextProvider(contextProvider);
@@ -318,7 +327,11 @@ public class CrosswalkSwitch<T> extends Switch<T> {
 			case CrosswalkPackage.FILE_BLOCK: {
 				FileBlock fileBlock = (FileBlock)theEObject;
 				T result = caseFileBlock(fileBlock);
+				if (result == null) result = caseMetadataBlock(fileBlock);
+				if (result == null) result = caseOutputElement(fileBlock);
+				if (result == null) result = caseMappingContainer(fileBlock);
 				if (result == null) result = caseFormElement(fileBlock);
+				if (result == null) result = caseContextProvider(fileBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -712,6 +725,21 @@ public class CrosswalkSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTextInputField(TextInputField object) {
+		return null;
+	}
+
+								/**
+	 * Returns the result of interpreting the object as an instance of '<em>Email Input Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Email Input Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmailInputField(EmailInputField object) {
 		return null;
 	}
 

@@ -177,6 +177,10 @@ public class CrosswalkAdapterFactory extends AdapterFactoryImpl {
 				return createTextInputFieldAdapter();
 			}
 			@Override
+			public Adapter caseEmailInputField(EmailInputField object) {
+				return createEmailInputFieldAdapter();
+			}
+			@Override
 			public Adapter caseContextProvider(ContextProvider object) {
 				return createContextProviderAdapter();
 			}
@@ -581,6 +585,20 @@ public class CrosswalkAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTextInputFieldAdapter() {
+		return null;
+	}
+
+								/**
+	 * Creates a new adapter for an object of class '{@link crosswalk.EmailInputField <em>Email Input Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see crosswalk.EmailInputField
+	 * @generated
+	 */
+	public Adapter createEmailInputFieldAdapter() {
 		return null;
 	}
 

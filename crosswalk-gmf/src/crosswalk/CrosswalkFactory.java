@@ -188,6 +188,15 @@ public interface CrosswalkFactory extends EFactory {
 	TextInputField createTextInputField();
 
 								/**
+	 * Returns a new object of class '<em>Email Input Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Email Input Field</em>'.
+	 * @generated
+	 */
+	EmailInputField createEmailInputField();
+
+								/**
 	 * Returns a new object of class '<em>Editing Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

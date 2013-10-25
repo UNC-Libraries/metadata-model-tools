@@ -60,10 +60,34 @@ public class MajorBlockItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addLabelPropertyDescriptor(object);
 			addSelectedMajorIndexPropertyDescriptor(object);
 			addMajorEntriesPropertyDescriptor(object);
+			addNameElementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MajorBlock_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MajorBlock_label_feature", "_UI_MajorBlock_type"),
+				 CrosswalkPackage.Literals.MAJOR_BLOCK__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -111,6 +135,28 @@ public class MajorBlockItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name Element feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNameElementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MajorBlock_nameElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MajorBlock_nameElement_feature", "_UI_MajorBlock_type"),
+				 CrosswalkPackage.Literals.MAJOR_BLOCK__NAME_ELEMENT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns MajorBlock.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,8 +175,10 @@ public class MajorBlockItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		MajorBlock majorBlock = (MajorBlock)object;
-		return getString("_UI_MajorBlock_type") + " " + majorBlock.getSelectedMajorIndex();
+		String label = ((MajorBlock)object).getLabel();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MajorBlock_type") :
+			getString("_UI_MajorBlock_type") + " " + label;
 	}
 
 	/**
@@ -145,6 +193,7 @@ public class MajorBlockItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MajorBlock.class)) {
+			case CrosswalkPackage.MAJOR_BLOCK__LABEL:
 			case CrosswalkPackage.MAJOR_BLOCK__SELECTED_MAJOR_INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

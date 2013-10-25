@@ -391,12 +391,4 @@ public interface Form extends Editable, ContextProvider {
 	 */
 	void setLogo(URI value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	EList<String> getUnifiedEmailDepositNoticeTo();
-
 } // Form

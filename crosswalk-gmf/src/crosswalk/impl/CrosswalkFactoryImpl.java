@@ -118,6 +118,7 @@ public class CrosswalkFactoryImpl extends EFactoryImpl implements CrosswalkFacto
 			case CrosswalkPackage.METADATA_BLOCK: return createMetadataBlock();
 			case CrosswalkPackage.INPUT_FIELD: return createInputField();
 			case CrosswalkPackage.TEXT_INPUT_FIELD: return createTextInputField();
+			case CrosswalkPackage.EMAIL_INPUT_FIELD: return createEmailInputField();
 			case CrosswalkPackage.EDITING_CONTAINER: return createEditingContainer();
 			case CrosswalkPackage.FORM: return createForm();
 			case CrosswalkPackage.MAJOR_BLOCK: return createMajorBlock();
@@ -361,6 +362,16 @@ public class CrosswalkFactoryImpl extends EFactoryImpl implements CrosswalkFacto
 	public TextInputField createTextInputField() {
 		TextInputFieldImpl textInputField = new TextInputFieldImpl();
 		return textInputField;
+	}
+
+/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EmailInputField createEmailInputField() {
+		EmailInputFieldImpl emailInputField = new EmailInputFieldImpl();
+		return emailInputField;
 	}
 
 /**

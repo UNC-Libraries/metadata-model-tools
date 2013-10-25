@@ -160,6 +160,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//TextInputField/validValues"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//TextInputField/type"/>
     </genClasses>
+    <genClasses ecoreClass="crosswalk.ecore#//EmailInputField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//EmailInputField/providesEmailDepositNoticeTo"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="crosswalk.ecore#//ContextProvider">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crosswalk.ecore#//ContextProvider/outputProfiles"/>
       <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//ContextProvider/currentUser"/>
@@ -186,7 +189,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//Form/contactName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//Form/contactEmail"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//Form/logo"/>
-      <genOperations ecoreOperation="crosswalk.ecore#//Form/getUnifiedEmailDepositNoticeTo"/>
     </genClasses>
     <genClasses ecoreClass="crosswalk.ecore#//MajorBlock">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//MajorBlock/label"/>
@@ -203,12 +205,10 @@
     </genClasses>
     <genClasses image="false" ecoreClass="crosswalk.ecore#//FormElement"/>
     <genClasses ecoreClass="crosswalk.ecore#//FileBlock">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/usage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/label"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/required"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/defaultAccess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/copyGrantsHavingRoles"/>
     </genClasses>
     <genClasses ecoreClass="crosswalk.ecore#//Paragraph">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//Paragraph/heading"/>
