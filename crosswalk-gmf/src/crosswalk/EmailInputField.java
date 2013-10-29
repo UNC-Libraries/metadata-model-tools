@@ -16,10 +16,10 @@ package crosswalk;
  * </p>
  *
  * @see crosswalk.CrosswalkPackage#getEmailInputField()
- * @model superTypes="crosswalk.InputField<org.eclipse.emf.ecore.EString>"
+ * @model
  * @generated
  */
-public interface EmailInputField extends InputField<String> {
+public interface EmailInputField extends TextInputField {
 	/**
 	 * Returns the value of the '<em><b>Provides Email Deposit Notice To</b></em>' attribute.
 	 * The default value is <code>"false"</code>.

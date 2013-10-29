@@ -266,6 +266,7 @@ public class CrosswalkSwitch<T> extends Switch<T> {
 			case CrosswalkPackage.EMAIL_INPUT_FIELD: {
 				EmailInputField emailInputField = (EmailInputField)theEObject;
 				T result = caseEmailInputField(emailInputField);
+				if (result == null) result = caseTextInputField(emailInputField);
 				if (result == null) result = caseInputField(emailInputField);
 				if (result == null) result = caseOutput(emailInputField);
 				if (result == null) result = caseInput(emailInputField);

@@ -2027,10 +2027,7 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 		EGenericType g2 = createEGenericType(ecorePackage.getEString());
 		g1.getETypeArguments().add(g2);
 		textInputFieldEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getInputField());
-		g2 = createEGenericType(ecorePackage.getEString());
-		g1.getETypeArguments().add(g2);
-		emailInputFieldEClass.getEGenericSuperTypes().add(g1);
+		emailInputFieldEClass.getESuperTypes().add(this.getTextInputField());
 		mappingContainerEClass.getESuperTypes().add(this.getContextProvider());
 		formEClass.getESuperTypes().add(this.getEditable());
 		formEClass.getESuperTypes().add(this.getContextProvider());

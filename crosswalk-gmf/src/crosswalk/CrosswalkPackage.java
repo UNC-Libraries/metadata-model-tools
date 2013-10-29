@@ -1391,7 +1391,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_INPUT_FIELD__OUTPUT = INPUT_FIELD__OUTPUT;
+	int EMAIL_INPUT_FIELD__OUTPUT = TEXT_INPUT_FIELD__OUTPUT;
 								/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -1399,7 +1399,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_INPUT_FIELD__LABEL = INPUT_FIELD__LABEL;
+	int EMAIL_INPUT_FIELD__LABEL = TEXT_INPUT_FIELD__LABEL;
 								/**
 	 * The feature id for the '<em><b>Usage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -1407,7 +1407,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_INPUT_FIELD__USAGE = INPUT_FIELD__USAGE;
+	int EMAIL_INPUT_FIELD__USAGE = TEXT_INPUT_FIELD__USAGE;
 								/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -1415,7 +1415,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_INPUT_FIELD__REQUIRED = INPUT_FIELD__REQUIRED;
+	int EMAIL_INPUT_FIELD__REQUIRED = TEXT_INPUT_FIELD__REQUIRED;
 								/**
 	 * The feature id for the '<em><b>Entered Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -1423,7 +1423,55 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_INPUT_FIELD__ENTERED_VALUE = INPUT_FIELD__ENTERED_VALUE;
+	int EMAIL_INPUT_FIELD__ENTERED_VALUE = TEXT_INPUT_FIELD__ENTERED_VALUE;
+								/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__WIDTH = TEXT_INPUT_FIELD__WIDTH;
+								/**
+	 * The feature id for the '<em><b>Max Characters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__MAX_CHARACTERS = TEXT_INPUT_FIELD__MAX_CHARACTERS;
+								/**
+	 * The feature id for the '<em><b>Vocabulary URL</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__VOCABULARY_URL = TEXT_INPUT_FIELD__VOCABULARY_URL;
+								/**
+	 * The feature id for the '<em><b>Allow Free Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__ALLOW_FREE_TEXT = TEXT_INPUT_FIELD__ALLOW_FREE_TEXT;
+								/**
+	 * The feature id for the '<em><b>Valid Values</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__VALID_VALUES = TEXT_INPUT_FIELD__VALID_VALUES;
+								/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__TYPE = TEXT_INPUT_FIELD__TYPE;
 								/**
 	 * The feature id for the '<em><b>Provides Email Deposit Notice To</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -1431,7 +1479,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_INPUT_FIELD__PROVIDES_EMAIL_DEPOSIT_NOTICE_TO = INPUT_FIELD_FEATURE_COUNT + 0;
+	int EMAIL_INPUT_FIELD__PROVIDES_EMAIL_DEPOSIT_NOTICE_TO = TEXT_INPUT_FIELD_FEATURE_COUNT + 0;
 								/**
 	 * The number of structural features of the '<em>Email Input Field</em>' class.
 	 * <!-- begin-user-doc -->
@@ -1439,7 +1487,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMAIL_INPUT_FIELD_FEATURE_COUNT = INPUT_FIELD_FEATURE_COUNT + 1;
+	int EMAIL_INPUT_FIELD_FEATURE_COUNT = TEXT_INPUT_FIELD_FEATURE_COUNT + 1;
 								/**
 	 * The meta object id for the '{@link crosswalk.MappingContainer <em>Mapping Container</em>}' class.
 	 * <!-- begin-user-doc -->

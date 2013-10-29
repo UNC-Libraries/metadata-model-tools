@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EmailInputFieldImpl extends InputFieldImpl<String> implements EmailInputField {
+public class EmailInputFieldImpl extends TextInputFieldImpl implements EmailInputField {
 	/**
 	 * The default value of the '{@link #isProvidesEmailDepositNoticeTo() <em>Provides Email Deposit Notice To</em>}' attribute.
 	 * <!-- begin-user-doc -->

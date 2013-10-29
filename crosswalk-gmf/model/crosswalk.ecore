@@ -183,13 +183,10 @@
       <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EmailInputField">
+  <eClassifiers xsi:type="ecore:EClass" name="EmailInputField" eSuperTypes="#//TextInputField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="providesEmailDepositNoticeTo"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
-    <eGenericSuperTypes eClassifier="#//InputField">
-      <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContextProvider" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputProfiles" upperBound="-1"
