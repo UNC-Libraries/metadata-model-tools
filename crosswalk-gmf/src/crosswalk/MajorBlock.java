@@ -52,6 +52,7 @@ public interface MajorBlock extends FormElement {
 
 	/**
 	 * Returns the value of the '<em><b>Selected Major Index</b></em>' attribute.
+	 * The default value is <code>"-1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Selected Major Index</em>' attribute isn't clear,
@@ -61,7 +62,7 @@ public interface MajorBlock extends FormElement {
 	 * @return the value of the '<em>Selected Major Index</em>' attribute.
 	 * @see #setSelectedMajorIndex(int)
 	 * @see crosswalk.CrosswalkPackage#getMajorBlock_SelectedMajorIndex()
-	 * @model
+	 * @model default="-1" required="true"
 	 * @generated
 	 */
 	int getSelectedMajorIndex();

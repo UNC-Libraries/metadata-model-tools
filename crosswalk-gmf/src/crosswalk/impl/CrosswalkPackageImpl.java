@@ -2227,7 +2227,7 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 
 		initEClass(majorBlockEClass, MajorBlock.class, "MajorBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMajorBlock_Label(), ecorePackage.getEString(), "label", null, 1, 1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMajorBlock_SelectedMajorIndex(), ecorePackage.getEInt(), "selectedMajorIndex", null, 0, 1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMajorBlock_SelectedMajorIndex(), ecorePackage.getEInt(), "selectedMajorIndex", "-1", 1, 1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMajorBlock_MajorEntries(), this.getMajorEntry(), null, "majorEntries", null, 1, -1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMajorBlock_NameElement(), this.getMappedElement(), null, "nameElement", null, 1, 1, MajorBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

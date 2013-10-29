@@ -240,7 +240,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="MajorBlock" eSuperTypes="#//FormElement">
     <eOperations name="getSelectedMajor" eType="#//MajorEntry"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectedMajorIndex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectedMajorIndex" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="-1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="majorEntries" lowerBound="1"
         upperBound="-1" eType="#//MajorEntry"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nameElement" lowerBound="1"

@@ -66,7 +66,7 @@ public class MajorBlockImpl extends EObjectImpl implements MajorBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int SELECTED_MAJOR_INDEX_EDEFAULT = 0;
+	protected static final int SELECTED_MAJOR_INDEX_EDEFAULT = -1;
 
 	/**
 	 * The cached value of the '{@link #getSelectedMajorIndex() <em>Selected Major Index</em>}' attribute.

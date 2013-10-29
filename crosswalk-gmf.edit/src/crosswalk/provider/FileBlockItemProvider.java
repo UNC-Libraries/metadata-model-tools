@@ -80,6 +80,7 @@ public class FileBlockItemProvider
 			addUsagePropertyDescriptor(object);
 			addLabelPropertyDescriptor(object);
 			addDefaultAccessPropertyDescriptor(object);
+			addCopyGrantsHavingRolesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -151,6 +152,28 @@ public class FileBlockItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Copy Grants Having Roles feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCopyGrantsHavingRolesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FileBlock_copyGrantsHavingRoles_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FileBlock_copyGrantsHavingRoles_feature", "_UI_FileBlock_type"),
+				 CrosswalkPackage.Literals.FILE_BLOCK__COPY_GRANTS_HAVING_ROLES,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns FileBlock.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -190,6 +213,7 @@ public class FileBlockItemProvider
 			case CrosswalkPackage.FILE_BLOCK__USAGE:
 			case CrosswalkPackage.FILE_BLOCK__LABEL:
 			case CrosswalkPackage.FILE_BLOCK__DEFAULT_ACCESS:
+			case CrosswalkPackage.FILE_BLOCK__COPY_GRANTS_HAVING_ROLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

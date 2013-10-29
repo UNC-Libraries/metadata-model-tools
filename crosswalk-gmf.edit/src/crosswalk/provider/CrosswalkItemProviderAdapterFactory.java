@@ -460,6 +460,29 @@ public class CrosswalkItemProviderAdapterFactory extends CrosswalkAdapterFactory
 	}
 
 								/**
+	 * This keeps track of the one adapter used for all {@link crosswalk.EmailInputField} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EmailInputFieldItemProvider emailInputFieldItemProvider;
+
+								/**
+	 * This creates an adapter for a {@link crosswalk.EmailInputField}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEmailInputFieldAdapter() {
+		if (emailInputFieldItemProvider == null) {
+			emailInputFieldItemProvider = new EmailInputFieldItemProvider(this);
+		}
+
+		return emailInputFieldItemProvider;
+	}
+
+								/**
 	 * This keeps track of the one adapter used for all {@link crosswalk.EditingContainer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
