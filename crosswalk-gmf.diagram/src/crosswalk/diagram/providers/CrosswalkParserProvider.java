@@ -439,14 +439,14 @@ public class CrosswalkParserProvider extends AbstractProvider implements
 	private IParser fileBlockName_5031Parser;
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	private IParser getFileBlockName_5031Parser() {
 		if (fileBlockName_5031Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrosswalkPackage.eINSTANCE
-					.getFileBlock_Name() };
+					.getMetadataBlock_Name() };
 			EAttribute[] editableFeatures = new EAttribute[] { CrosswalkPackage.eINSTANCE
-					.getFileBlock_Name() };
+					.getMetadataBlock_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
 			fileBlockName_5031Parser = parser;
@@ -460,14 +460,14 @@ public class CrosswalkParserProvider extends AbstractProvider implements
 	private IParser fileBlockDescription_5032Parser;
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	private IParser getFileBlockDescription_5032Parser() {
 		if (fileBlockDescription_5032Parser == null) {
 			EAttribute[] features = new EAttribute[] { CrosswalkPackage.eINSTANCE
-					.getFileBlock_Description() };
+					.getMetadataBlock_Description() };
 			EAttribute[] editableFeatures = new EAttribute[] { CrosswalkPackage.eINSTANCE
-					.getFileBlock_Description() };
+					.getMetadataBlock_Description() };
 			MessageFormatParser parser = new MessageFormatParser(features,
 					editableFeatures);
 			fileBlockDescription_5032Parser = parser;
