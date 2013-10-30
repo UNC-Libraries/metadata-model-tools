@@ -3518,6 +3518,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFileBlock_Usage();
+	
 
 								/**
 	 * Returns the meta object for the attribute '{@link crosswalk.FileBlock#getLabel <em>Label</em>}'.

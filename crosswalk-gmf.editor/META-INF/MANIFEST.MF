@@ -16,5 +16,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui.ide;visibility:=reexport,
  mods.model.edit;bundle-version="0.0.0"
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: .,
- opencsv-2.2.jar
+Bundle-ClassPath: .

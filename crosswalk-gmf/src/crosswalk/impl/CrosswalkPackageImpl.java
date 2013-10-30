@@ -1508,8 +1508,8 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 	public EAttribute getFileBlock_Usage() {
 		return (EAttribute)fileBlockEClass.getEStructuralFeatures().get(0);
 	}
-
-								/**
+	
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

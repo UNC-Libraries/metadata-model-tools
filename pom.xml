@@ -9,7 +9,7 @@
 	<packaging>pom</packaging>
 	<inceptionYear>2010</inceptionYear>
 	<properties>
-		<tycho-version>0.17.0</tycho-version>
+		<tycho-version>0.18.0</tycho-version>
 		<tycho-groupid>org.eclipse.tycho</tycho-groupid>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -64,6 +64,12 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/epsilon/updates/</url>
 		</repository>
+		<repository>
+			<!-- you can build this repo in the workbench maven-osgi-bundles sub-module -->
+			<id>maven-osgi-bundles</id>
+			<layout>p2</layout>
+			<url>http://www2.lib.unc.edu/software/workbench/p2/maven-osgi-bundles/</url>
+		</repository>
 	</repositories>
 	<modules>
 		<module>crosswalk-gmf</module>
@@ -80,8 +86,8 @@
 		<module>access-control</module>
 		<module>access-control.edit</module>
 		<module>crosswalk-gmf.custom</module>
-		<!--<module>feature</module>-->
-		<!--<module>eclipse-repository</module>-->
+		<module>mmt-feature</module>
+		<module>mmt-repository</module>
 	</modules>
 	<build>
 		<pluginManagement>
@@ -118,7 +124,7 @@
 				<configuration>
 					<resolver>p2</resolver>
 					<ignoreTychoRepositories>true</ignoreTychoRepositories>
-					<pomDependencies>consider</pomDependencies>
+					<!--pomDependencies>consider</pomDependencies-->
 					<environments>
 						<environment>
 							<os>linux</os>
@@ -130,8 +136,6 @@
 							<ws>gtk</ws>
 							<arch>x86</arch>
 						</environment>
-						<!-- <environment> <os>macosx</os> <ws>cocoa</ws> <arch>x86</arch> 
-							</environment> -->
 						<environment>
 							<os>macosx</os>
 							<ws>cocoa</ws>
@@ -175,8 +179,6 @@
 					</includes>
 					<excludes>
 						<exclude>**/bin/**</exclude>
-						<exclude>org.slf4j.pde/**</exclude>
-						<exclude>**/org.slf4j.pde/**</exclude>
 					</excludes>
 					<mapping>
 						<sch>XML_STYLE</sch>

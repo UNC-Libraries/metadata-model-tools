@@ -540,7 +540,7 @@ public class MappedAttributeImpl extends EObjectImpl implements MappedAttribute 
 	 */
 	public Class getInputType() {
 		Class result = null; // null doesn't equal anything except null
-		if (this.isSetConversionStrategy()) {
+		if (this.isSetConversionStrategy() && this.getConversionStrategy() != null) {
 			result = this.getConversionStrategy().getInputType();
 		} else if (this.getMappedFeature() != null) {
 			//result = this.getMappedFeature().getEAttributeType().getInstanceClass();
@@ -589,7 +589,7 @@ public class MappedAttributeImpl extends EObjectImpl implements MappedAttribute 
 			try {
 				input = gen.getResult();
 				if (input != null) {
-					if (this.isSetConversionStrategy()) {
+					if (this.isSetConversionStrategy() && this.getConversionStrategy() != null) {
 						setting = this.getConversionStrategy().convert(input);
 					} else if (EcoreUtil.equals(this.getMappedFeature().getEAttributeType(), EcorePackage.eINSTANCE.getEFeatureMapEntry())) {
 						setting = EcoreUtil.createFromString(EcorePackage.eINSTANCE.getEString(), input.toString());
