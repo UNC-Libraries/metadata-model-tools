@@ -290,7 +290,7 @@ public class CrosswalkDiagramEditorPlugin extends AbstractUIPlugin {
 			String uri = loc.toString();
 			Resource metsResource = null;
 			try {
-				logInfo("METS attempting to load existing file:" + uri);
+				logInfo("METS attempting to load existing file: "+ uri);
 				metsResource = rf.createResource(URI.createURI(uri));
 				((ResourceImpl) metsResource)
 						.setIntrinsicIDToEObjectMap(new HashMap());
@@ -303,11 +303,10 @@ public class CrosswalkDiagramEditorPlugin extends AbstractUIPlugin {
 				}
 			} catch (RuntimeException e) {
 				// TODO warn user in an alert dialog
-				logInfo("Cannot load preferred dictionary: " + loc.toString()
+				logInfo("Cannot load preferred dictionary: "+ loc.toString()
 						+ " (" + e.getLocalizedMessage() + ")");
 			} catch (IOException e) {
-				logInfo("Cannot load preferred dictionary: " + loc.toString()
-						+ " (" + e.getLocalizedMessage() + ")");
+				logInfo("Cannot load preferred dictionary: "+ loc.toString(), e);
 			}
 		}
 	}

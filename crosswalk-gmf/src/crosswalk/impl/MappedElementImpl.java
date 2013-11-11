@@ -344,7 +344,7 @@ public class MappedElementImpl extends EObjectImpl implements MappedElement {
 					record.eSet(getMappedFeature(), myobject);
 				}
 			}
-			LOG.debug("my modified parent: " + record.toString());
+			LOG.debug("my modified parent: {}", record.toString());
 		}
 	}
 

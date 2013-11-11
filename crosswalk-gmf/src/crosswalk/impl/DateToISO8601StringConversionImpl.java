@@ -80,7 +80,7 @@ public class DateToISO8601StringConversionImpl extends EObjectImpl implements Da
       	  }
       	  if(input instanceof ImpreciseDate) {
       		  ImpreciseDate date = (ImpreciseDate)input;
-      		  LOG.debug("got imprecise date with precision: "+date.getPrecision());
+      		  LOG.debug("got imprecise date with precision: {}", date.getPrecision());
       		  if(DatePrecision.YEAR.equals(date.getPrecision())) {
       			  return yearFormat.format(date);
       		  } else if(DatePrecision.MONTH.equals(date.getPrecision())) {

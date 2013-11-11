@@ -426,7 +426,7 @@ public class OriginalNameRecordMatcherImpl extends WalkWidgetImpl implements Ori
 				}
 			}
 			String recordID = ds.getRecordID();
-			LOG.debug("processMember( pattern:"+pattern+", "+recordID);
+			LOG.debug("processMember( pattern: {}, {}", pattern, recordID);
 			if (recordPatterns.containsKey(pattern)) {
 				recordPatterns.get(pattern).add(recordID);
 			} else {
@@ -444,7 +444,6 @@ public class OriginalNameRecordMatcherImpl extends WalkWidgetImpl implements Ori
 	private void processMembers(DivType container, Map<String, Set<DivType>> divPatterns) throws CoreException {
 		for (DivType div : container.getDiv()) {
 			String pattern = getDivPattern(div);
-			// LOG.debug("processMember( pattern:"+pattern+", "+r.toString());
 			if (divPatterns.containsKey(pattern)) {
 				divPatterns.get(pattern).add(div);
 			} else {

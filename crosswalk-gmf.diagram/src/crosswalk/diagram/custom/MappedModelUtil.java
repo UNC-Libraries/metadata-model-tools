@@ -61,7 +61,7 @@ public class MappedModelUtil {
 	 */
 	public static List<EStructuralFeature> getChildElementFeatures(
 			EObject parent) {
-		LOG.debug("model parent:" + parent);
+		LOG.debug("model parent: {}", parent);
 		List<EStructuralFeature> result = new ArrayList<EStructuralFeature>();
 		List<EClass> mappedParentTypes = new ArrayList<EClass>();
 		List<MappedElement> elementsMappedAlready = new ArrayList<MappedElement>();
