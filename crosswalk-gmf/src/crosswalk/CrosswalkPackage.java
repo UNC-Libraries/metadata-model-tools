@@ -2112,13 +2112,21 @@ public interface CrosswalkPackage extends EPackage {
 	int DATE_INPUT_FIELD__DATE_PRECISION = INPUT_FIELD_FEATURE_COUNT + 0;
 
 								/**
+	 * The feature id for the '<em><b>Blank Default Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_INPUT_FIELD__BLANK_DEFAULT_DATE = INPUT_FIELD_FEATURE_COUNT + 1;
+								/**
 	 * The number of structural features of the '<em>Date Input Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_INPUT_FIELD_FEATURE_COUNT = INPUT_FIELD_FEATURE_COUNT + 1;
+	int DATE_INPUT_FIELD_FEATURE_COUNT = INPUT_FIELD_FEATURE_COUNT + 2;
 
 								/**
 	 * The meta object id for the '{@link crosswalk.impl.OutputProfileImpl <em>Output Profile</em>}' class.
@@ -3607,6 +3615,17 @@ public interface CrosswalkPackage extends EPackage {
 	EAttribute getDateInputField_DatePrecision();
 
 								/**
+	 * Returns the meta object for the attribute '{@link crosswalk.DateInputField#isBlankDefaultDate <em>Blank Default Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Blank Default Date</em>'.
+	 * @see crosswalk.DateInputField#isBlankDefaultDate()
+	 * @see #getDateInputField()
+	 * @generated
+	 */
+	EAttribute getDateInputField_BlankDefaultDate();
+
+								/**
 	 * Returns the meta object for class '{@link crosswalk.OutputProfile <em>Output Profile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4862,6 +4881,14 @@ public interface CrosswalkPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DATE_INPUT_FIELD__DATE_PRECISION = eINSTANCE.getDateInputField_DatePrecision();
+
+																/**
+		 * The meta object literal for the '<em><b>Blank Default Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATE_INPUT_FIELD__BLANK_DEFAULT_DATE = eINSTANCE.getDateInputField_BlankDefaultDate();
 
 																/**
 		 * The meta object literal for the '{@link crosswalk.impl.OutputProfileImpl <em>Output Profile</em>}' class.

@@ -273,6 +273,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="DateInputField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="datePrecision" lowerBound="1"
         eType="#//DatePrecision" defaultValueLiteral="Day"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="blankDefaultDate" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eGenericSuperTypes eClassifier="#//InputField">
       <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eGenericSuperTypes>

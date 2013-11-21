@@ -1586,6 +1586,15 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDateInputField_BlankDefaultDate() {
+		return (EAttribute)dateInputFieldEClass.getEStructuralFeatures().get(1);
+	}
+
+								/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOutputProfile() {
 		return outputProfileEClass;
 	}
@@ -1935,6 +1944,7 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 
 		dateInputFieldEClass = createEClass(DATE_INPUT_FIELD);
 		createEAttribute(dateInputFieldEClass, DATE_INPUT_FIELD__DATE_PRECISION);
+		createEAttribute(dateInputFieldEClass, DATE_INPUT_FIELD__BLANK_DEFAULT_DATE);
 
 		outputProfileEClass = createEClass(OUTPUT_PROFILE);
 		createEReference(outputProfileEClass, OUTPUT_PROFILE__PARENT_MAPPED_FEATURE);
@@ -2250,6 +2260,7 @@ public class CrosswalkPackageImpl extends EPackageImpl implements CrosswalkPacka
 
 		initEClass(dateInputFieldEClass, DateInputField.class, "DateInputField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDateInputField_DatePrecision(), this.getDatePrecision(), "datePrecision", "Day", 1, 1, DateInputField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDateInputField_BlankDefaultDate(), ecorePackage.getEBoolean(), "blankDefaultDate", "false", 1, 1, DateInputField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputProfileEClass, OutputProfile.class, "OutputProfile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOutputProfile_ParentMappedFeature(), ecorePackage.getEReference(), null, "parentMappedFeature", null, 1, 1, OutputProfile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
