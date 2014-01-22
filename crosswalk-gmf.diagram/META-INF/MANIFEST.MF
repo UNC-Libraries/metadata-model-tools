@@ -57,8 +57,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.epsilon.evl.emf.validation;bundle-version="1.0.0";visibility:=reexport,
  org.eclipse.emf.validation;visibility:=reexport,
  org.eclipse.gmf.tooling.runtime;bundle-version="3.1.0",
- slf4j.api;bundle-version="1.7.5",
- com.googlecode.juniversalchardet;bundle-version="1.0.3"
+ com.googlecode.juniversalchardet;bundle-version="1.0.3",
+ org.ops4j.pax.logging.pax-logging-api;bundle-version="1.7.1"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ClassPath: .
