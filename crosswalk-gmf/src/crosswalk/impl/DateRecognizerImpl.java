@@ -193,7 +193,7 @@ public class DateRecognizerImpl extends WalkWidgetImpl implements DateRecognizer
 			if (o != null && o instanceof String) {
 				String input = (String) o;
 				input = input.trim();
-				LOG.debug("got an input string: " + input);
+				LOG.debug("got an input string: {}", input);
 				for (String format : this.getFormats()) {
 					SimpleDateFormat sdf = new SimpleDateFormat(format);
 					sdf.setLenient(false);
@@ -203,12 +203,12 @@ public class DateRecognizerImpl extends WalkWidgetImpl implements DateRecognizer
 						continue;
 					}
 					if (p.getIndex() < input.length()) {
-						LOG.debug("date format parsing did not include entire input string. " + format + "==" + input);
+						LOG.debug("date format parsing did not include entire input string. {} == {}", format, input);
 						continue;
 					}
-					LOG.debug("parsed a date: " + dt.toString());
+					LOG.debug("parsed a date: {}", dt.toString());
 					DatePrecision precision = ImpreciseDate.getFormatPrecision(format);
-					LOG.debug("get precision: " + precision);
+					LOG.debug("get precision: {}", precision);
 					result = new ImpreciseDate(dt);
 					if (precision != null) {
 						result.setPrecision(precision);

@@ -559,7 +559,7 @@ public class MappedAttributeImpl extends EObjectImpl implements MappedAttribute 
 	public Object getValue() {
 		
 		EAttribute myAttribute = this.getMappedFeature();
-		LOG.debug("my type: " + myAttribute.toString());
+		LOG.debug("my type: {}", myAttribute.toString());
 		
 		Object setting = null;
 		Object defaultSetting = null;

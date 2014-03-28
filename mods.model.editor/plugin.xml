@@ -28,7 +28,7 @@
    <extension point="org.eclipse.ui.editors">
       <editor
             id="gov.loc.mods.mods.presentation.MODSEditorID"
-            name="%_UI_V3Editor_label"
+            name="%_UI_MODSEditor_label"
             icon="icons/full/obj16/MODSModelFile.gif"
             extensions="xml,mods"
             class="gov.loc.mods.mods.presentation.MODSEditor"
