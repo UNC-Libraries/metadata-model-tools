@@ -71,6 +71,7 @@ public class DateInputFieldItemProvider
 			super.getPropertyDescriptors(object);
 
 			addDatePrecisionPropertyDescriptor(object);
+			addBlankDefaultDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,6 +94,28 @@ public class DateInputFieldItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Blank Default Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBlankDefaultDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DateInputField_blankDefaultDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DateInputField_blankDefaultDate_feature", "_UI_DateInputField_type"),
+				 CrosswalkPackage.Literals.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -135,6 +158,7 @@ public class DateInputFieldItemProvider
 
 		switch (notification.getFeatureID(DateInputField.class)) {
 			case CrosswalkPackage.DATE_INPUT_FIELD__DATE_PRECISION:
+			case CrosswalkPackage.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
