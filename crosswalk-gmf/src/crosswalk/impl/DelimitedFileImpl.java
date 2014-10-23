@@ -547,23 +547,15 @@ public class DelimitedFileImpl extends EObjectImpl implements DelimitedFile {
 				BufferedReader br = new BufferedReader(
 						new InputStreamReader(new FileInputStream(f), this.getTextEncoding()));
 				reader = new CSVReader(br, this.getFieldDelimiter(), this.getTextDelimiter());
-				// TODO deal with non-set last data row
 				// read up to first data row
 				for(int i = 0; i < this.getFirstDataRow()-1; i++) {
 					reader.readNext();
 				}
 				for(int i = 0; !isSetLastDataRow() || i+getFirstDataRow() <= getLastDataRow(); i++) {
 					String[] next = reader.readNext();
-					if(next == null) break;
+					if(next == null || (next.length == 1 && "".equals(next[0].trim()))) break;
 					this.lines.add(next);
 				}
-				//if (isSetLastDataRow()) {
-				//	for (int i = getFirstDataRow(); i <= getLastDataRow(); i++) {
-				//		this.lines.add(reader.readNext());
-				//	}
-				//} else {
-				//	this.lines = reader.readAll();
-				//}
 			} catch (IOException e) {
 				e.printStackTrace();
 				throw new DataException(e);
