@@ -28,11 +28,13 @@ import org.eclipse.swt.events.FocusEvent;
 import org.eclipse.swt.events.FocusListener;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
@@ -75,10 +77,13 @@ public class DelimitedFileDelimitersWizardPage extends WizardPage implements IWi
 	@Override
 	public void createControl(Composite parent) {
 		initializeDialogUnits(parent);
+
+    	this.setTitle("Choose Options");
+    	this.setMessage("Choose the characters that separate fields and surround text. If necessary, limit the crosswalk to a range of rows.");
+    	
 		// top level group
 		Composite top = new Composite(parent, SWT.NONE);
 		top.setLayout(new GridLayout(2, false));
-		this.setMessage("Select the delimiters and significant rows for your file.", DialogPage.INFORMATION);
 
 		Label fieldL = new Label(top, SWT.None);
 		fieldL.setText("Field Delimiter");
@@ -270,7 +275,7 @@ public class DelimitedFileDelimitersWizardPage extends WizardPage implements IWi
 				{
 					TableColumn col = new TableColumn(sampleData, SWT.NONE, colnum);
 					col.setResizable(false);
-					col.setText("");
+					col.setText("#");
 					col.setAlignment(SWT.RIGHT);
 					colnum++;
 				}
@@ -286,13 +291,24 @@ public class DelimitedFileDelimitersWizardPage extends WizardPage implements IWi
 
 				// insert items up to table item count
 				TableItem[] items = sampleData.getItems();
-				for (int i = 0; (!ds.isSetLastDataRow() || i <= ds.getLastDataRow()-ds.getFirstDataRow()) && i < items.length; i++) {
-					ds.GoToRecord(ds.getFirstDataRow()+i);
-					String[] row = ds.getRawRowData();
-					String[] longer = new String[row.length + 1];
-				   System.arraycopy(row, 0, longer, 1, row.length);
-				   longer[0] = String.valueOf(ds.getFirstDataRow()+i);
-					items[i].setText(longer);
+				Color firstRowColor = Display.getCurrent().getSystemColor(SWT.COLOR_WIDGET_BACKGROUND);
+				for (int i = 0; i < items.length; i++) {
+					items[i].setBackground(0, firstRowColor);
+					try {
+						int thisRow = ds.getFirstDataRow()+i;
+						if(ds.isSetLastDataRow() && thisRow > ds.getLastDataRow()) {
+							items[i].setText(new String[] {});
+							continue;
+						}
+						ds.GoToRecord(ds.getFirstDataRow()+i);
+						String[] dataText = ds.getRawRowData();
+						String[] rowText = new String[1+dataText.length];
+						rowText[0] = String.valueOf(thisRow);
+						System.arraycopy(dataText, 0, rowText, 1, dataText.length);
+						items[i].setText(rowText);
+					} catch(crosswalk.RecordOutOfRangeException e) {
+						items[i].setText(new String[] {});
+					}
 				}
 
 				// pack the columns

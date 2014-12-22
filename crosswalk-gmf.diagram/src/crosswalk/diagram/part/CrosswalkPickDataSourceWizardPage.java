@@ -67,6 +67,8 @@ public class CrosswalkPickDataSourceWizardPage extends WizardPage implements IWi
      */
     @Override
     public void createControl(Composite parent) {
+    	this.setTitle("Define Crosswalk");
+    	this.setMessage("Give your crosswalk a name and select your project");
 	initializeDialogUnits(parent);
 	// top level group
 	Composite topLevel = new Composite(parent, SWT.NONE);

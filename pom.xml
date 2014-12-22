@@ -62,7 +62,7 @@
 		<repository>
 			<id>epsilon-updates</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/epsilon/updates/</url>
+			<url>http://download.eclipse.org/epsilon/1.1/updates/</url>
 		</repository>
 		<repository>
 			<!-- you can build this repo in the workbench maven-osgi-bundles sub-module -->
