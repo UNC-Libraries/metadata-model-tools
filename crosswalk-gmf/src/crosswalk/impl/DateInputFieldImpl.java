@@ -35,6 +35,7 @@ import crosswalk.util.ImpreciseDate;
  * The following features are implemented:
  * <ul>
  *   <li>{@link crosswalk.impl.DateInputFieldImpl#getDatePrecision <em>Date Precision</em>}</li>
+ *   <li>{@link crosswalk.impl.DateInputFieldImpl#isBlankDefaultDate <em>Blank Default Date</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,6 +60,25 @@ public class DateInputFieldImpl extends InputFieldImpl<Date> implements DateInpu
 	 * @ordered
 	 */
 	protected DatePrecision datePrecision = DATE_PRECISION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isBlankDefaultDate() <em>Blank Default Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isBlankDefaultDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean BLANK_DEFAULT_DATE_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isBlankDefaultDate() <em>Blank Default Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isBlankDefaultDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean blankDefaultDate = BLANK_DEFAULT_DATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,11 +125,34 @@ public class DateInputFieldImpl extends InputFieldImpl<Date> implements DateInpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isBlankDefaultDate() {
+		return blankDefaultDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBlankDefaultDate(boolean newBlankDefaultDate) {
+		boolean oldBlankDefaultDate = blankDefaultDate;
+		blankDefaultDate = newBlankDefaultDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrosswalkPackage.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE, oldBlankDefaultDate, blankDefaultDate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CrosswalkPackage.DATE_INPUT_FIELD__DATE_PRECISION:
 				return getDatePrecision();
+			case CrosswalkPackage.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE:
+				return isBlankDefaultDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -124,6 +167,9 @@ public class DateInputFieldImpl extends InputFieldImpl<Date> implements DateInpu
 		switch (featureID) {
 			case CrosswalkPackage.DATE_INPUT_FIELD__DATE_PRECISION:
 				setDatePrecision((DatePrecision)newValue);
+				return;
+			case CrosswalkPackage.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE:
+				setBlankDefaultDate((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -140,6 +186,9 @@ public class DateInputFieldImpl extends InputFieldImpl<Date> implements DateInpu
 			case CrosswalkPackage.DATE_INPUT_FIELD__DATE_PRECISION:
 				setDatePrecision(DATE_PRECISION_EDEFAULT);
 				return;
+			case CrosswalkPackage.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE:
+				setBlankDefaultDate(BLANK_DEFAULT_DATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -154,6 +203,8 @@ public class DateInputFieldImpl extends InputFieldImpl<Date> implements DateInpu
 		switch (featureID) {
 			case CrosswalkPackage.DATE_INPUT_FIELD__DATE_PRECISION:
 				return datePrecision != DATE_PRECISION_EDEFAULT;
+			case CrosswalkPackage.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE:
+				return blankDefaultDate != BLANK_DEFAULT_DATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -170,6 +221,8 @@ public class DateInputFieldImpl extends InputFieldImpl<Date> implements DateInpu
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (datePrecision: ");
 		result.append(datePrecision);
+		result.append(", blankDefaultDate: ");
+		result.append(blankDefaultDate);
 		result.append(')');
 		return result.toString();
 	}

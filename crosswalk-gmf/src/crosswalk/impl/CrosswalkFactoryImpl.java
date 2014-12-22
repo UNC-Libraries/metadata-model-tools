@@ -118,8 +118,11 @@ public class CrosswalkFactoryImpl extends EFactoryImpl implements CrosswalkFacto
 			case CrosswalkPackage.METADATA_BLOCK: return createMetadataBlock();
 			case CrosswalkPackage.INPUT_FIELD: return createInputField();
 			case CrosswalkPackage.TEXT_INPUT_FIELD: return createTextInputField();
+			case CrosswalkPackage.EMAIL_INPUT_FIELD: return createEmailInputField();
 			case CrosswalkPackage.EDITING_CONTAINER: return createEditingContainer();
 			case CrosswalkPackage.FORM: return createForm();
+			case CrosswalkPackage.MAJOR_BLOCK: return createMajorBlock();
+			case CrosswalkPackage.MAJOR_ENTRY: return createMajorEntry();
 			case CrosswalkPackage.FILE_BLOCK: return createFileBlock();
 			case CrosswalkPackage.PARAGRAPH: return createParagraph();
 			case CrosswalkPackage.DATE_INPUT_FIELD: return createDateInputField();
@@ -366,6 +369,16 @@ public class CrosswalkFactoryImpl extends EFactoryImpl implements CrosswalkFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EmailInputField createEmailInputField() {
+		EmailInputFieldImpl emailInputField = new EmailInputFieldImpl();
+		return emailInputField;
+	}
+
+/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EditingContainer createEditingContainer() {
 		EditingContainerImpl editingContainer = new EditingContainerImpl();
 		return editingContainer;
@@ -379,6 +392,26 @@ public class CrosswalkFactoryImpl extends EFactoryImpl implements CrosswalkFacto
 	public Form createForm() {
 		FormImpl form = new FormImpl();
 		return form;
+	}
+
+/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MajorBlock createMajorBlock() {
+		MajorBlockImpl majorBlock = new MajorBlockImpl();
+		return majorBlock;
+	}
+
+/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MajorEntry createMajorEntry() {
+		MajorEntryImpl majorEntry = new MajorEntryImpl();
+		return majorEntry;
 	}
 
 /**

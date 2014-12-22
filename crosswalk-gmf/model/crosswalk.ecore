@@ -111,6 +111,7 @@
         eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EReference"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//MappedElement"
         eOpposite="#//MappedElement/childElements"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatedFeature" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MappedAttribute" eSuperTypes="#//OutputElement #//Input">
     <eStructuralFeatures xsi:type="ecore:EReference" name="mappedFeature" lowerBound="1"
@@ -182,6 +183,11 @@
       <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eGenericSuperTypes>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EmailInputField" eSuperTypes="#//TextInputField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="providesEmailDepositNoticeTo"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContextProvider" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputProfiles" upperBound="-1"
         eType="#//OutputProfile" containment="true"/>
@@ -228,16 +234,34 @@
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logo" eType="#//URI"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MajorBlock" eSuperTypes="#//FormElement">
+    <eOperations name="getSelectedMajor" eType="#//MajorEntry"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectedMajorIndex" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="majorEntries" lowerBound="1"
+        upperBound="-1" eType="#//MajorEntry"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nameElement" lowerBound="1"
+        eType="#//MappedElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MajorEntry">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="observerGroups" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reviewerGroups" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emailDepositNoticeTo" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FormElement" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FileBlock" eSuperTypes="#//FormElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FileBlock" eSuperTypes="#//MetadataBlock">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="usage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="required" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultAccess" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="copyGrantsHavingRoles"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="URI" instanceClassName="java.net.URI"/>
   <eClassifiers xsi:type="ecore:EClass" name="Paragraph" eSuperTypes="#//FormElement">
@@ -249,6 +273,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="DateInputField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="datePrecision" lowerBound="1"
         eType="#//DatePrecision" defaultValueLiteral="Day"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="blankDefaultDate" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
     <eGenericSuperTypes eClassifier="#//InputField">
       <eTypeArguments eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eGenericSuperTypes>

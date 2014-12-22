@@ -353,7 +353,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getContextProvider()
 	 * @generated
 	 */
-	int CONTEXT_PROVIDER = 24;
+	int CONTEXT_PROVIDER = 25;
 
 								/**
 	 * The feature id for the '<em><b>Output Profiles</b></em>' containment reference list.
@@ -857,13 +857,21 @@ public interface CrosswalkPackage extends EPackage {
         int MAPPED_ELEMENT__PARENT = OUTPUT_ELEMENT_FEATURE_COUNT + 3;
 
         /**
+	 * The feature id for the '<em><b>Generated Feature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPED_ELEMENT__GENERATED_FEATURE = OUTPUT_ELEMENT_FEATURE_COUNT + 4;
+								/**
 	 * The number of structural features of the '<em>Mapped Element</em>' class.
 	 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-        int MAPPED_ELEMENT_FEATURE_COUNT = OUTPUT_ELEMENT_FEATURE_COUNT + 4;
+        int MAPPED_ELEMENT_FEATURE_COUNT = OUTPUT_ELEMENT_FEATURE_COUNT + 5;
 
         /**
 	 * The meta object id for the '{@link crosswalk.impl.MappedAttributeImpl <em>Mapped Attribute</em>}' class.
@@ -1368,6 +1376,119 @@ public interface CrosswalkPackage extends EPackage {
 	int TEXT_INPUT_FIELD_FEATURE_COUNT = INPUT_FIELD_FEATURE_COUNT + 6;
 
 								/**
+	 * The meta object id for the '{@link crosswalk.impl.EmailInputFieldImpl <em>Email Input Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crosswalk.impl.EmailInputFieldImpl
+	 * @see crosswalk.impl.CrosswalkPackageImpl#getEmailInputField()
+	 * @generated
+	 */
+	int EMAIL_INPUT_FIELD = 24;
+								/**
+	 * The feature id for the '<em><b>Output</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__OUTPUT = TEXT_INPUT_FIELD__OUTPUT;
+								/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__LABEL = TEXT_INPUT_FIELD__LABEL;
+								/**
+	 * The feature id for the '<em><b>Usage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__USAGE = TEXT_INPUT_FIELD__USAGE;
+								/**
+	 * The feature id for the '<em><b>Required</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__REQUIRED = TEXT_INPUT_FIELD__REQUIRED;
+								/**
+	 * The feature id for the '<em><b>Entered Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__ENTERED_VALUE = TEXT_INPUT_FIELD__ENTERED_VALUE;
+								/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__WIDTH = TEXT_INPUT_FIELD__WIDTH;
+								/**
+	 * The feature id for the '<em><b>Max Characters</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__MAX_CHARACTERS = TEXT_INPUT_FIELD__MAX_CHARACTERS;
+								/**
+	 * The feature id for the '<em><b>Vocabulary URL</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__VOCABULARY_URL = TEXT_INPUT_FIELD__VOCABULARY_URL;
+								/**
+	 * The feature id for the '<em><b>Allow Free Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__ALLOW_FREE_TEXT = TEXT_INPUT_FIELD__ALLOW_FREE_TEXT;
+								/**
+	 * The feature id for the '<em><b>Valid Values</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__VALID_VALUES = TEXT_INPUT_FIELD__VALID_VALUES;
+								/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__TYPE = TEXT_INPUT_FIELD__TYPE;
+								/**
+	 * The feature id for the '<em><b>Provides Email Deposit Notice To</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD__PROVIDES_EMAIL_DEPOSIT_NOTICE_TO = TEXT_INPUT_FIELD_FEATURE_COUNT + 0;
+								/**
+	 * The number of structural features of the '<em>Email Input Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMAIL_INPUT_FIELD_FEATURE_COUNT = TEXT_INPUT_FIELD_FEATURE_COUNT + 1;
+								/**
 	 * The meta object id for the '{@link crosswalk.MappingContainer <em>Mapping Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1375,7 +1496,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getMappingContainer()
 	 * @generated
 	 */
-	int MAPPING_CONTAINER = 25;
+	int MAPPING_CONTAINER = 26;
 
 								/**
 	 * The feature id for the '<em><b>Output Profiles</b></em>' containment reference list.
@@ -1439,7 +1560,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getEditingContainer()
 	 * @generated
 	 */
-	int EDITING_CONTAINER = 26;
+	int EDITING_CONTAINER = 27;
 
 								/**
 	 * The feature id for the '<em><b>Model</b></em>' containment reference.
@@ -1467,7 +1588,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getEditable()
 	 * @generated
 	 */
-	int EDITABLE = 27;
+	int EDITABLE = 28;
 
 								/**
 	 * The number of structural features of the '<em>Editable</em>' class.
@@ -1486,7 +1607,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getForm()
 	 * @generated
 	 */
-	int FORM = 28;
+	int FORM = 29;
 
 								/**
 	 * The feature id for the '<em><b>Output Profiles</b></em>' containment reference list.
@@ -1631,7 +1752,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getFormElement()
 	 * @generated
 	 */
-	int FORM_ELEMENT = 29;
+	int FORM_ELEMENT = 32;
 
 								/**
 	 * The number of structural features of the '<em>Form Element</em>' class.
@@ -1643,15 +1764,63 @@ public interface CrosswalkPackage extends EPackage {
 	int FORM_ELEMENT_FEATURE_COUNT = 0;
 
 								/**
-	 * The meta object id for the '{@link crosswalk.impl.FileBlockImpl <em>File Block</em>}' class.
+	 * The meta object id for the '{@link crosswalk.impl.MajorBlockImpl <em>Major Block</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see crosswalk.impl.FileBlockImpl
-	 * @see crosswalk.impl.CrosswalkPackageImpl#getFileBlock()
+	 * @see crosswalk.impl.MajorBlockImpl
+	 * @see crosswalk.impl.CrosswalkPackageImpl#getMajorBlock()
 	 * @generated
 	 */
-	int FILE_BLOCK = 30;
-
+	int MAJOR_BLOCK = 30;
+								/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_BLOCK__LABEL = FORM_ELEMENT_FEATURE_COUNT + 0;
+								/**
+	 * The feature id for the '<em><b>Selected Major Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_BLOCK__SELECTED_MAJOR_INDEX = FORM_ELEMENT_FEATURE_COUNT + 1;
+								/**
+	 * The feature id for the '<em><b>Major Entries</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_BLOCK__MAJOR_ENTRIES = FORM_ELEMENT_FEATURE_COUNT + 2;
+								/**
+	 * The feature id for the '<em><b>Name Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_BLOCK__NAME_ELEMENT = FORM_ELEMENT_FEATURE_COUNT + 3;
+								/**
+	 * The number of structural features of the '<em>Major Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_BLOCK_FEATURE_COUNT = FORM_ELEMENT_FEATURE_COUNT + 4;
+								/**
+	 * The meta object id for the '{@link crosswalk.impl.MajorEntryImpl <em>Major Entry</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crosswalk.impl.MajorEntryImpl
+	 * @see crosswalk.impl.CrosswalkPackageImpl#getMajorEntry()
+	 * @generated
+	 */
+	int MAJOR_ENTRY = 31;
 								/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -1659,7 +1828,113 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_BLOCK__NAME = FORM_ELEMENT_FEATURE_COUNT + 0;
+	int MAJOR_ENTRY__NAME = 0;
+								/**
+	 * The feature id for the '<em><b>Observer Groups</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_ENTRY__OBSERVER_GROUPS = 1;
+								/**
+	 * The feature id for the '<em><b>Reviewer Groups</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_ENTRY__REVIEWER_GROUPS = 2;
+								/**
+	 * The feature id for the '<em><b>Email Deposit Notice To</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_ENTRY__EMAIL_DEPOSIT_NOTICE_TO = 3;
+								/**
+	 * The number of structural features of the '<em>Major Entry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAJOR_ENTRY_FEATURE_COUNT = 4;
+								/**
+	 * The meta object id for the '{@link crosswalk.impl.FileBlockImpl <em>File Block</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see crosswalk.impl.FileBlockImpl
+	 * @see crosswalk.impl.CrosswalkPackageImpl#getFileBlock()
+	 * @generated
+	 */
+	int FILE_BLOCK = 33;
+
+								/**
+	 * The feature id for the '<em><b>Walk</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__WALK = METADATA_BLOCK__WALK;
+								/**
+	 * The feature id for the '<em><b>Exception</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__EXCEPTION = METADATA_BLOCK__EXCEPTION;
+								/**
+	 * The feature id for the '<em><b>Output Profiles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__OUTPUT_PROFILES = METADATA_BLOCK__OUTPUT_PROFILES;
+								/**
+	 * The feature id for the '<em><b>Current User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__CURRENT_USER = METADATA_BLOCK__CURRENT_USER;
+								/**
+	 * The feature id for the '<em><b>Widgets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__WIDGETS = METADATA_BLOCK__WIDGETS;
+								/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__ELEMENTS = METADATA_BLOCK__ELEMENTS;
+								/**
+	 * The feature id for the '<em><b>Exceptions</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__EXCEPTIONS = METADATA_BLOCK__EXCEPTIONS;
+								/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__NAME = METADATA_BLOCK__NAME;
 
 								/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1668,26 +1943,16 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_BLOCK__DESCRIPTION = FORM_ELEMENT_FEATURE_COUNT + 1;
+	int FILE_BLOCK__DESCRIPTION = METADATA_BLOCK__DESCRIPTION;
 
 								/**
-	 * The feature id for the '<em><b>Usage</b></em>' attribute.
+	 * The feature id for the '<em><b>Ports</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_BLOCK__USAGE = FORM_ELEMENT_FEATURE_COUNT + 2;
-
-								/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_BLOCK__LABEL = FORM_ELEMENT_FEATURE_COUNT + 3;
-
+	int FILE_BLOCK__PORTS = METADATA_BLOCK__PORTS;
 								/**
 	 * The feature id for the '<em><b>Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -1695,8 +1960,31 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_BLOCK__REQUIRED = FORM_ELEMENT_FEATURE_COUNT + 4;
-
+	int FILE_BLOCK__REQUIRED = METADATA_BLOCK__REQUIRED;
+								/**
+	 * The feature id for the '<em><b>Max Repeat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__MAX_REPEAT = METADATA_BLOCK__MAX_REPEAT;
+								/**
+	 * The feature id for the '<em><b>Usage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__USAGE = METADATA_BLOCK_FEATURE_COUNT + 0;
+								/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__LABEL = METADATA_BLOCK_FEATURE_COUNT + 1;
 								/**
 	 * The feature id for the '<em><b>Default Access</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -1704,8 +1992,15 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_BLOCK__DEFAULT_ACCESS = FORM_ELEMENT_FEATURE_COUNT + 5;
-
+	int FILE_BLOCK__DEFAULT_ACCESS = METADATA_BLOCK_FEATURE_COUNT + 2;
+								/**
+	 * The feature id for the '<em><b>Copy Grants Having Roles</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_BLOCK__COPY_GRANTS_HAVING_ROLES = METADATA_BLOCK_FEATURE_COUNT + 3;
 								/**
 	 * The number of structural features of the '<em>File Block</em>' class.
 	 * <!-- begin-user-doc -->
@@ -1713,7 +2008,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FILE_BLOCK_FEATURE_COUNT = FORM_ELEMENT_FEATURE_COUNT + 6;
+	int FILE_BLOCK_FEATURE_COUNT = METADATA_BLOCK_FEATURE_COUNT + 4;
 
 								/**
 	 * The meta object id for the '{@link crosswalk.impl.ParagraphImpl <em>Paragraph</em>}' class.
@@ -1723,7 +2018,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getParagraph()
 	 * @generated
 	 */
-	int PARAGRAPH = 31;
+	int PARAGRAPH = 34;
 
 								/**
 	 * The feature id for the '<em><b>Heading</b></em>' attribute.
@@ -1760,7 +2055,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getDateInputField()
 	 * @generated
 	 */
-	int DATE_INPUT_FIELD = 32;
+	int DATE_INPUT_FIELD = 35;
 
 								/**
 	 * The feature id for the '<em><b>Output</b></em>' reference.
@@ -1817,13 +2112,21 @@ public interface CrosswalkPackage extends EPackage {
 	int DATE_INPUT_FIELD__DATE_PRECISION = INPUT_FIELD_FEATURE_COUNT + 0;
 
 								/**
+	 * The feature id for the '<em><b>Blank Default Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_INPUT_FIELD__BLANK_DEFAULT_DATE = INPUT_FIELD_FEATURE_COUNT + 1;
+								/**
 	 * The number of structural features of the '<em>Date Input Field</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_INPUT_FIELD_FEATURE_COUNT = INPUT_FIELD_FEATURE_COUNT + 1;
+	int DATE_INPUT_FIELD_FEATURE_COUNT = INPUT_FIELD_FEATURE_COUNT + 2;
 
 								/**
 	 * The meta object id for the '{@link crosswalk.impl.OutputProfileImpl <em>Output Profile</em>}' class.
@@ -1833,7 +2136,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getOutputProfile()
 	 * @generated
 	 */
-	int OUTPUT_PROFILE = 33;
+	int OUTPUT_PROFILE = 36;
 
 								/**
 	 * The feature id for the '<em><b>Parent Mapped Feature</b></em>' reference.
@@ -1915,7 +2218,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getDateToXMLGregorianCalenderConversion()
 	 * @generated
 	 */
-	int DATE_TO_XML_GREGORIAN_CALENDER_CONVERSION = 34;
+	int DATE_TO_XML_GREGORIAN_CALENDER_CONVERSION = 37;
 
 								/**
 	 * The number of structural features of the '<em>Date To XML Gregorian Calender Conversion</em>' class.
@@ -1934,7 +2237,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getDatePrecision()
 	 * @generated
 	 */
-	int DATE_PRECISION = 35;
+	int DATE_PRECISION = 38;
 
 								/**
 	 * The meta object id for the '{@link crosswalk.FieldWidth <em>Field Width</em>}' enum.
@@ -1944,7 +2247,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getFieldWidth()
 	 * @generated
 	 */
-	int FIELD_WIDTH = 36;
+	int FIELD_WIDTH = 39;
 
 								/**
 	 * The meta object id for the '{@link crosswalk.TextInputType <em>Text Input Type</em>}' enum.
@@ -1954,7 +2257,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getTextInputType()
 	 * @generated
 	 */
-	int TEXT_INPUT_TYPE = 37;
+	int TEXT_INPUT_TYPE = 40;
 
 								/**
 	 * The meta object id for the '{@link crosswalk.OutputMetadataSections <em>Output Metadata Sections</em>}' enum.
@@ -1964,7 +2267,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getOutputMetadataSections()
 	 * @generated
 	 */
-	int OUTPUT_METADATA_SECTIONS = 38;
+	int OUTPUT_METADATA_SECTIONS = 41;
 
 								/**
 	 * The meta object id for the '<em>Data Exception</em>' data type.
@@ -1974,7 +2277,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getDataException()
 	 * @generated
 	 */
-        int DATA_EXCEPTION = 39;
+        int DATA_EXCEPTION = 42;
 
         /**
 	 * The meta object id for the '<em>Record Matches</em>' data type.
@@ -1984,7 +2287,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getRecordMatches()
 	 * @generated
 	 */
-        int RECORD_MATCHES = 40;
+        int RECORD_MATCHES = 43;
 
         /**
 	 * The meta object id for the '<em>Record Out Of Range Exception</em>' data type.
@@ -1994,7 +2297,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getRecordOutOfRangeException()
 	 * @generated
 	 */
-        int RECORD_OUT_OF_RANGE_EXCEPTION = 41;
+        int RECORD_OUT_OF_RANGE_EXCEPTION = 44;
 
         /**
 	 * The meta object id for the '<em>URI</em>' data type.
@@ -2004,7 +2307,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getURI()
 	 * @generated
 	 */
-	int URI = 42;
+	int URI = 45;
 
 								/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -2014,7 +2317,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 43;
+	int EXCEPTION = 46;
 
 								/**
 	 * The meta object id for the '<em>Clazz</em>' data type.
@@ -2024,7 +2327,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @see crosswalk.impl.CrosswalkPackageImpl#getClazz()
 	 * @generated
 	 */
-	int CLAZZ = 44;
+	int CLAZZ = 47;
 
 								/**
 	 * Returns the meta object for class '{@link crosswalk.TabbedDataField <em>Tabbed Data Field</em>}'.
@@ -2483,6 +2786,17 @@ public interface CrosswalkPackage extends EPackage {
         EReference getMappedElement_Parent();
 
         /**
+	 * Returns the meta object for the reference '{@link crosswalk.MappedElement#getGeneratedFeature <em>Generated Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Generated Feature</em>'.
+	 * @see crosswalk.MappedElement#getGeneratedFeature()
+	 * @see #getMappedElement()
+	 * @generated
+	 */
+	EReference getMappedElement_GeneratedFeature();
+
+								/**
 	 * Returns the meta object for class '{@link crosswalk.MappedAttribute <em>Mapped Attribute</em>}'.
 	 * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -2806,6 +3120,27 @@ public interface CrosswalkPackage extends EPackage {
 	EAttribute getTextInputField_Type();
 
 								/**
+	 * Returns the meta object for class '{@link crosswalk.EmailInputField <em>Email Input Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Email Input Field</em>'.
+	 * @see crosswalk.EmailInputField
+	 * @generated
+	 */
+	EClass getEmailInputField();
+
+								/**
+	 * Returns the meta object for the attribute '{@link crosswalk.EmailInputField#isProvidesEmailDepositNoticeTo <em>Provides Email Deposit Notice To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Provides Email Deposit Notice To</em>'.
+	 * @see crosswalk.EmailInputField#isProvidesEmailDepositNoticeTo()
+	 * @see #getEmailInputField()
+	 * @generated
+	 */
+	EAttribute getEmailInputField_ProvidesEmailDepositNoticeTo();
+
+								/**
 	 * Returns the meta object for class '{@link crosswalk.ContextProvider <em>Context Provider</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3054,6 +3389,114 @@ public interface CrosswalkPackage extends EPackage {
 	EAttribute getForm_Logo();
 
 								/**
+	 * Returns the meta object for class '{@link crosswalk.MajorBlock <em>Major Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Major Block</em>'.
+	 * @see crosswalk.MajorBlock
+	 * @generated
+	 */
+	EClass getMajorBlock();
+
+								/**
+	 * Returns the meta object for the attribute '{@link crosswalk.MajorBlock#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see crosswalk.MajorBlock#getLabel()
+	 * @see #getMajorBlock()
+	 * @generated
+	 */
+	EAttribute getMajorBlock_Label();
+
+								/**
+	 * Returns the meta object for the attribute '{@link crosswalk.MajorBlock#getSelectedMajorIndex <em>Selected Major Index</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selected Major Index</em>'.
+	 * @see crosswalk.MajorBlock#getSelectedMajorIndex()
+	 * @see #getMajorBlock()
+	 * @generated
+	 */
+	EAttribute getMajorBlock_SelectedMajorIndex();
+
+								/**
+	 * Returns the meta object for the reference list '{@link crosswalk.MajorBlock#getMajorEntries <em>Major Entries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Major Entries</em>'.
+	 * @see crosswalk.MajorBlock#getMajorEntries()
+	 * @see #getMajorBlock()
+	 * @generated
+	 */
+	EReference getMajorBlock_MajorEntries();
+
+								/**
+	 * Returns the meta object for the reference '{@link crosswalk.MajorBlock#getNameElement <em>Name Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Name Element</em>'.
+	 * @see crosswalk.MajorBlock#getNameElement()
+	 * @see #getMajorBlock()
+	 * @generated
+	 */
+	EReference getMajorBlock_NameElement();
+
+								/**
+	 * Returns the meta object for class '{@link crosswalk.MajorEntry <em>Major Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Major Entry</em>'.
+	 * @see crosswalk.MajorEntry
+	 * @generated
+	 */
+	EClass getMajorEntry();
+
+								/**
+	 * Returns the meta object for the attribute '{@link crosswalk.MajorEntry#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see crosswalk.MajorEntry#getName()
+	 * @see #getMajorEntry()
+	 * @generated
+	 */
+	EAttribute getMajorEntry_Name();
+
+								/**
+	 * Returns the meta object for the attribute list '{@link crosswalk.MajorEntry#getObserverGroups <em>Observer Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Observer Groups</em>'.
+	 * @see crosswalk.MajorEntry#getObserverGroups()
+	 * @see #getMajorEntry()
+	 * @generated
+	 */
+	EAttribute getMajorEntry_ObserverGroups();
+
+								/**
+	 * Returns the meta object for the attribute list '{@link crosswalk.MajorEntry#getReviewerGroups <em>Reviewer Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Reviewer Groups</em>'.
+	 * @see crosswalk.MajorEntry#getReviewerGroups()
+	 * @see #getMajorEntry()
+	 * @generated
+	 */
+	EAttribute getMajorEntry_ReviewerGroups();
+
+								/**
+	 * Returns the meta object for the attribute list '{@link crosswalk.MajorEntry#getEmailDepositNoticeTo <em>Email Deposit Notice To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Email Deposit Notice To</em>'.
+	 * @see crosswalk.MajorEntry#getEmailDepositNoticeTo()
+	 * @see #getMajorEntry()
+	 * @generated
+	 */
+	EAttribute getMajorEntry_EmailDepositNoticeTo();
+
+								/**
 	 * Returns the meta object for class '{@link crosswalk.FormElement <em>Form Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3074,28 +3517,6 @@ public interface CrosswalkPackage extends EPackage {
 	EClass getFileBlock();
 
 								/**
-	 * Returns the meta object for the attribute '{@link crosswalk.FileBlock#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see crosswalk.FileBlock#getName()
-	 * @see #getFileBlock()
-	 * @generated
-	 */
-	EAttribute getFileBlock_Name();
-
-								/**
-	 * Returns the meta object for the attribute '{@link crosswalk.FileBlock#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see crosswalk.FileBlock#getDescription()
-	 * @see #getFileBlock()
-	 * @generated
-	 */
-	EAttribute getFileBlock_Description();
-
-								/**
 	 * Returns the meta object for the attribute '{@link crosswalk.FileBlock#getUsage <em>Usage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3105,6 +3526,7 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFileBlock_Usage();
+	
 
 								/**
 	 * Returns the meta object for the attribute '{@link crosswalk.FileBlock#getLabel <em>Label</em>}'.
@@ -3118,17 +3540,6 @@ public interface CrosswalkPackage extends EPackage {
 	EAttribute getFileBlock_Label();
 
 								/**
-	 * Returns the meta object for the attribute '{@link crosswalk.FileBlock#isRequired <em>Required</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Required</em>'.
-	 * @see crosswalk.FileBlock#isRequired()
-	 * @see #getFileBlock()
-	 * @generated
-	 */
-	EAttribute getFileBlock_Required();
-
-								/**
 	 * Returns the meta object for the attribute '{@link crosswalk.FileBlock#isDefaultAccess <em>Default Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3138,6 +3549,17 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFileBlock_DefaultAccess();
+
+								/**
+	 * Returns the meta object for the attribute list '{@link crosswalk.FileBlock#getCopyGrantsHavingRoles <em>Copy Grants Having Roles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Copy Grants Having Roles</em>'.
+	 * @see crosswalk.FileBlock#getCopyGrantsHavingRoles()
+	 * @see #getFileBlock()
+	 * @generated
+	 */
+	EAttribute getFileBlock_CopyGrantsHavingRoles();
 
 								/**
 	 * Returns the meta object for class '{@link crosswalk.Paragraph <em>Paragraph</em>}'.
@@ -3191,6 +3613,17 @@ public interface CrosswalkPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDateInputField_DatePrecision();
+
+								/**
+	 * Returns the meta object for the attribute '{@link crosswalk.DateInputField#isBlankDefaultDate <em>Blank Default Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Blank Default Date</em>'.
+	 * @see crosswalk.DateInputField#isBlankDefaultDate()
+	 * @see #getDateInputField()
+	 * @generated
+	 */
+	EAttribute getDateInputField_BlankDefaultDate();
 
 								/**
 	 * Returns the meta object for class '{@link crosswalk.OutputProfile <em>Output Profile</em>}'.
@@ -3796,6 +4229,14 @@ public interface CrosswalkPackage extends EPackage {
                 EReference MAPPED_ELEMENT__PARENT = eINSTANCE.getMappedElement_Parent();
 
                 /**
+		 * The meta object literal for the '<em><b>Generated Feature</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAPPED_ELEMENT__GENERATED_FEATURE = eINSTANCE.getMappedElement_GeneratedFeature();
+
+																/**
 		 * The meta object literal for the '{@link crosswalk.impl.MappedAttributeImpl <em>Mapped Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
                  * <!-- end-user-doc -->
@@ -4050,6 +4491,24 @@ public interface CrosswalkPackage extends EPackage {
 		EAttribute TEXT_INPUT_FIELD__TYPE = eINSTANCE.getTextInputField_Type();
 
 																/**
+		 * The meta object literal for the '{@link crosswalk.impl.EmailInputFieldImpl <em>Email Input Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see crosswalk.impl.EmailInputFieldImpl
+		 * @see crosswalk.impl.CrosswalkPackageImpl#getEmailInputField()
+		 * @generated
+		 */
+		EClass EMAIL_INPUT_FIELD = eINSTANCE.getEmailInputField();
+
+																/**
+		 * The meta object literal for the '<em><b>Provides Email Deposit Notice To</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EMAIL_INPUT_FIELD__PROVIDES_EMAIL_DEPOSIT_NOTICE_TO = eINSTANCE.getEmailInputField_ProvidesEmailDepositNoticeTo();
+
+																/**
 		 * The meta object literal for the '{@link crosswalk.impl.ContextProviderImpl <em>Context Provider</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4244,6 +4703,90 @@ public interface CrosswalkPackage extends EPackage {
 		EAttribute FORM__LOGO = eINSTANCE.getForm_Logo();
 
 																/**
+		 * The meta object literal for the '{@link crosswalk.impl.MajorBlockImpl <em>Major Block</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see crosswalk.impl.MajorBlockImpl
+		 * @see crosswalk.impl.CrosswalkPackageImpl#getMajorBlock()
+		 * @generated
+		 */
+		EClass MAJOR_BLOCK = eINSTANCE.getMajorBlock();
+
+																/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAJOR_BLOCK__LABEL = eINSTANCE.getMajorBlock_Label();
+
+																/**
+		 * The meta object literal for the '<em><b>Selected Major Index</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAJOR_BLOCK__SELECTED_MAJOR_INDEX = eINSTANCE.getMajorBlock_SelectedMajorIndex();
+
+																/**
+		 * The meta object literal for the '<em><b>Major Entries</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAJOR_BLOCK__MAJOR_ENTRIES = eINSTANCE.getMajorBlock_MajorEntries();
+
+																/**
+		 * The meta object literal for the '<em><b>Name Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAJOR_BLOCK__NAME_ELEMENT = eINSTANCE.getMajorBlock_NameElement();
+
+																/**
+		 * The meta object literal for the '{@link crosswalk.impl.MajorEntryImpl <em>Major Entry</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see crosswalk.impl.MajorEntryImpl
+		 * @see crosswalk.impl.CrosswalkPackageImpl#getMajorEntry()
+		 * @generated
+		 */
+		EClass MAJOR_ENTRY = eINSTANCE.getMajorEntry();
+
+																/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAJOR_ENTRY__NAME = eINSTANCE.getMajorEntry_Name();
+
+																/**
+		 * The meta object literal for the '<em><b>Observer Groups</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAJOR_ENTRY__OBSERVER_GROUPS = eINSTANCE.getMajorEntry_ObserverGroups();
+
+																/**
+		 * The meta object literal for the '<em><b>Reviewer Groups</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAJOR_ENTRY__REVIEWER_GROUPS = eINSTANCE.getMajorEntry_ReviewerGroups();
+
+																/**
+		 * The meta object literal for the '<em><b>Email Deposit Notice To</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAJOR_ENTRY__EMAIL_DEPOSIT_NOTICE_TO = eINSTANCE.getMajorEntry_EmailDepositNoticeTo();
+
+																/**
 		 * The meta object literal for the '{@link crosswalk.FormElement <em>Form Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4264,22 +4807,6 @@ public interface CrosswalkPackage extends EPackage {
 		EClass FILE_BLOCK = eINSTANCE.getFileBlock();
 
 																/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FILE_BLOCK__NAME = eINSTANCE.getFileBlock_Name();
-
-																/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FILE_BLOCK__DESCRIPTION = eINSTANCE.getFileBlock_Description();
-
-																/**
 		 * The meta object literal for the '<em><b>Usage</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4296,20 +4823,20 @@ public interface CrosswalkPackage extends EPackage {
 		EAttribute FILE_BLOCK__LABEL = eINSTANCE.getFileBlock_Label();
 
 																/**
-		 * The meta object literal for the '<em><b>Required</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FILE_BLOCK__REQUIRED = eINSTANCE.getFileBlock_Required();
-
-																/**
 		 * The meta object literal for the '<em><b>Default Access</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute FILE_BLOCK__DEFAULT_ACCESS = eINSTANCE.getFileBlock_DefaultAccess();
+
+																/**
+		 * The meta object literal for the '<em><b>Copy Grants Having Roles</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FILE_BLOCK__COPY_GRANTS_HAVING_ROLES = eINSTANCE.getFileBlock_CopyGrantsHavingRoles();
 
 																/**
 		 * The meta object literal for the '{@link crosswalk.impl.ParagraphImpl <em>Paragraph</em>}' class.
@@ -4354,6 +4881,14 @@ public interface CrosswalkPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DATE_INPUT_FIELD__DATE_PRECISION = eINSTANCE.getDateInputField_DatePrecision();
+
+																/**
+		 * The meta object literal for the '<em><b>Blank Default Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATE_INPUT_FIELD__BLANK_DEFAULT_DATE = eINSTANCE.getDateInputField_BlankDefaultDate();
 
 																/**
 		 * The meta object literal for the '{@link crosswalk.impl.OutputProfileImpl <em>Output Profile</em>}' class.

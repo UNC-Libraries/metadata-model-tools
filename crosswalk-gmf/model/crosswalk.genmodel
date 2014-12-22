@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/crosswalk-gmf/src" modelPluginID="crosswalk-gmf"
-    modelName="Crosswalk" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
-    copyrightFields="false">
+    templateDirectory="" modelName="Crosswalk" modelPluginClass="" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
   <foreignModel>crosswalk.ecore</foreignModel>
   <genPackages prefix="Crosswalk" disposableProviderFactory="true" ecorePackage="crosswalk.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="crosswalk.ecore#//DatePrecision">
@@ -114,6 +114,7 @@
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
           ecoreFeature="ecore:EReference crosswalk.ecore#//MappedElement/mappedFeature"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference crosswalk.ecore#//MappedElement/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crosswalk.ecore#//MappedElement/generatedFeature"/>
     </genClasses>
     <genClasses ecoreClass="crosswalk.ecore#//MappedAttribute">
       <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
@@ -159,6 +160,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//TextInputField/validValues"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//TextInputField/type"/>
     </genClasses>
+    <genClasses ecoreClass="crosswalk.ecore#//EmailInputField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//EmailInputField/providesEmailDepositNoticeTo"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="crosswalk.ecore#//ContextProvider">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crosswalk.ecore#//ContextProvider/outputProfiles"/>
       <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//ContextProvider/currentUser"/>
@@ -186,14 +190,25 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//Form/contactEmail"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//Form/logo"/>
     </genClasses>
+    <genClasses ecoreClass="crosswalk.ecore#//MajorBlock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//MajorBlock/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//MajorBlock/selectedMajorIndex"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crosswalk.ecore#//MajorBlock/majorEntries"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference crosswalk.ecore#//MajorBlock/nameElement"/>
+      <genOperations ecoreOperation="crosswalk.ecore#//MajorBlock/getSelectedMajor"/>
+    </genClasses>
+    <genClasses ecoreClass="crosswalk.ecore#//MajorEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//MajorEntry/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//MajorEntry/observerGroups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//MajorEntry/reviewerGroups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//MajorEntry/emailDepositNoticeTo"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="crosswalk.ecore#//FormElement"/>
     <genClasses ecoreClass="crosswalk.ecore#//FileBlock">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/usage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/label"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/required"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/defaultAccess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//FileBlock/copyGrantsHavingRoles"/>
     </genClasses>
     <genClasses ecoreClass="crosswalk.ecore#//Paragraph">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//Paragraph/heading"/>
@@ -201,6 +216,7 @@
     </genClasses>
     <genClasses ecoreClass="crosswalk.ecore#//DateInputField">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//DateInputField/datePrecision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute crosswalk.ecore#//DateInputField/blankDefaultDate"/>
     </genClasses>
     <genClasses ecoreClass="crosswalk.ecore#//OutputProfile">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference crosswalk.ecore#//OutputProfile/parentMappedFeature"/>

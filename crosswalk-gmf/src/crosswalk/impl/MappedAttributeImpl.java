@@ -19,12 +19,14 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xml.type.InvalidDatatypeValueException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -572,7 +574,11 @@ public class MappedAttributeImpl extends EObjectImpl implements MappedAttribute 
 			if (EcoreUtil.equals(this.getMappedFeature().getEAttributeType(), EcorePackage.eINSTANCE.getEFeatureMapEntry())) {
 				defaultSetting = getDefaultValue();
 			} else {
-				defaultSetting = EcoreUtil.createFromString(this.getMappedFeature().getEAttributeType(), getDefaultValue());
+				try {
+					defaultSetting = EcoreUtil.createFromString(this.getMappedFeature().getEAttributeType(), getDefaultValue());
+				} catch (InvalidDatatypeValueException e) {
+					defaultSetting = null;
+				}
 			}
 			
 		}

@@ -26,6 +26,7 @@ import java.util.Date;
  * The following features are supported:
  * <ul>
  *   <li>{@link crosswalk.DateInputField#getDatePrecision <em>Date Precision</em>}</li>
+ *   <li>{@link crosswalk.DateInputField#isBlankDefaultDate <em>Blank Default Date</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,4 +65,31 @@ public interface DateInputField extends InputField<Date> {
 	 * @generated
 	 */
 	void setDatePrecision(DatePrecision value);
+
+	/**
+	 * Returns the value of the '<em><b>Blank Default Date</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Blank Default Date</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Blank Default Date</em>' attribute.
+	 * @see #setBlankDefaultDate(boolean)
+	 * @see crosswalk.CrosswalkPackage#getDateInputField_BlankDefaultDate()
+	 * @model default="false" required="true"
+	 * @generated
+	 */
+	boolean isBlankDefaultDate();
+
+	/**
+	 * Sets the value of the '{@link crosswalk.DateInputField#isBlankDefaultDate <em>Blank Default Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Blank Default Date</em>' attribute.
+	 * @see #isBlankDefaultDate()
+	 * @generated
+	 */
+	void setBlankDefaultDate(boolean value);
 } // DateInputField

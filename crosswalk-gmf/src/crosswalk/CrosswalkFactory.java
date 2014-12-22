@@ -188,6 +188,15 @@ public interface CrosswalkFactory extends EFactory {
 	TextInputField createTextInputField();
 
 								/**
+	 * Returns a new object of class '<em>Email Input Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Email Input Field</em>'.
+	 * @generated
+	 */
+	EmailInputField createEmailInputField();
+
+								/**
 	 * Returns a new object of class '<em>Editing Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -204,6 +213,24 @@ public interface CrosswalkFactory extends EFactory {
 	 * @generated
 	 */
 	Form createForm();
+
+								/**
+	 * Returns a new object of class '<em>Major Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Major Block</em>'.
+	 * @generated
+	 */
+	MajorBlock createMajorBlock();
+
+								/**
+	 * Returns a new object of class '<em>Major Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Major Entry</em>'.
+	 * @generated
+	 */
+	MajorEntry createMajorEntry();
 
 								/**
 	 * Returns a new object of class '<em>File Block</em>'.

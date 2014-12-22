@@ -115,6 +115,16 @@ public class MappedElementImpl extends EObjectImpl implements MappedElement {
 	protected EReference mappedFeature;
 
 	/**
+	 * The cached value of the '{@link #getGeneratedFeature() <em>Generated Feature</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGeneratedFeature()
+	 * @generated
+	 * @ordered
+	 */
+	protected EObject generatedFeature;
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -288,6 +298,44 @@ public class MappedElementImpl extends EObjectImpl implements MappedElement {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject getGeneratedFeature() {
+		if (generatedFeature != null && generatedFeature.eIsProxy()) {
+			InternalEObject oldGeneratedFeature = (InternalEObject)generatedFeature;
+			generatedFeature = eResolveProxy(oldGeneratedFeature);
+			if (generatedFeature != oldGeneratedFeature) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CrosswalkPackage.MAPPED_ELEMENT__GENERATED_FEATURE, oldGeneratedFeature, generatedFeature));
+			}
+		}
+		return generatedFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetGeneratedFeature() {
+		return generatedFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGeneratedFeature(EObject newGeneratedFeature) {
+		EObject oldGeneratedFeature = generatedFeature;
+		generatedFeature = newGeneratedFeature;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrosswalkPackage.MAPPED_ELEMENT__GENERATED_FEATURE, oldGeneratedFeature, generatedFeature));
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 *
 	 * @generated NOT
@@ -298,6 +346,7 @@ public class MappedElementImpl extends EObjectImpl implements MappedElement {
 			//System.out.println("my type: " + mytype.toString());
 			if(!record.eClass().getEAllContainments().contains(this.getMappedFeature())) return;
 			EObject myobject = mytype.getEPackage().getEFactoryInstance().create(mytype);
+			this.generatedFeature = myobject;
 			//System.out.println("my object: " + myobject.toString());
 			
 			for (MappedAttribute ma : this.getAttributes()) {
@@ -436,6 +485,9 @@ public class MappedElementImpl extends EObjectImpl implements MappedElement {
 				return basicGetMappedFeature();
 			case CrosswalkPackage.MAPPED_ELEMENT__PARENT:
 				return getParent();
+			case CrosswalkPackage.MAPPED_ELEMENT__GENERATED_FEATURE:
+				if (resolve) return getGeneratedFeature();
+				return basicGetGeneratedFeature();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -468,6 +520,9 @@ public class MappedElementImpl extends EObjectImpl implements MappedElement {
 			case CrosswalkPackage.MAPPED_ELEMENT__PARENT:
 				setParent((MappedElement)newValue);
 				return;
+			case CrosswalkPackage.MAPPED_ELEMENT__GENERATED_FEATURE:
+				setGeneratedFeature((EObject)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -497,6 +552,9 @@ public class MappedElementImpl extends EObjectImpl implements MappedElement {
 			case CrosswalkPackage.MAPPED_ELEMENT__PARENT:
 				setParent((MappedElement)null);
 				return;
+			case CrosswalkPackage.MAPPED_ELEMENT__GENERATED_FEATURE:
+				setGeneratedFeature((EObject)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -520,6 +578,8 @@ public class MappedElementImpl extends EObjectImpl implements MappedElement {
 				return mappedFeature != null;
 			case CrosswalkPackage.MAPPED_ELEMENT__PARENT:
 				return getParent() != null;
+			case CrosswalkPackage.MAPPED_ELEMENT__GENERATED_FEATURE:
+				return generatedFeature != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -1,26 +1,10 @@
 /**
- * Copyright 2010 The University of North Carolina at Chapel Hill
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-/**
  */
 package crosswalk.provider;
 
 
-import crosswalk.CrosswalkFactory;
 import crosswalk.CrosswalkPackage;
-import crosswalk.FileBlock;
+import crosswalk.MajorBlock;
 
 import java.util.Collection;
 import java.util.List;
@@ -30,7 +14,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -43,13 +26,13 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link crosswalk.FileBlock} object.
+ * This is the item provider adapter for a {@link crosswalk.MajorBlock} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FileBlockItemProvider
-	extends MetadataBlockItemProvider
+public class MajorBlockItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -62,7 +45,7 @@ public class FileBlockItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FileBlockItemProvider(AdapterFactory adapterFactory) {
+	public MajorBlockItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -77,34 +60,12 @@ public class FileBlockItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUsagePropertyDescriptor(object);
 			addLabelPropertyDescriptor(object);
-			addDefaultAccessPropertyDescriptor(object);
-			addCopyGrantsHavingRolesPropertyDescriptor(object);
+			addSelectedMajorIndexPropertyDescriptor(object);
+			addMajorEntriesPropertyDescriptor(object);
+			addNameElementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Usage feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FileBlock_usage_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FileBlock_usage_feature", "_UI_FileBlock_type"),
-				 CrosswalkPackage.Literals.FILE_BLOCK__USAGE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -118,9 +79,9 @@ public class FileBlockItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FileBlock_label_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FileBlock_label_feature", "_UI_FileBlock_type"),
-				 CrosswalkPackage.Literals.FILE_BLOCK__LABEL,
+				 getString("_UI_MajorBlock_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MajorBlock_label_feature", "_UI_MajorBlock_type"),
+				 CrosswalkPackage.Literals.MAJOR_BLOCK__LABEL,
 				 true,
 				 false,
 				 false,
@@ -130,58 +91,80 @@ public class FileBlockItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Default Access feature.
+	 * This adds a property descriptor for the Selected Major Index feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDefaultAccessPropertyDescriptor(Object object) {
+	protected void addSelectedMajorIndexPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FileBlock_defaultAccess_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FileBlock_defaultAccess_feature", "_UI_FileBlock_type"),
-				 CrosswalkPackage.Literals.FILE_BLOCK__DEFAULT_ACCESS,
+				 getString("_UI_MajorBlock_selectedMajorIndex_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MajorBlock_selectedMajorIndex_feature", "_UI_MajorBlock_type"),
+				 CrosswalkPackage.Literals.MAJOR_BLOCK__SELECTED_MAJOR_INDEX,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Copy Grants Having Roles feature.
+	 * This adds a property descriptor for the Major Entries feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCopyGrantsHavingRolesPropertyDescriptor(Object object) {
+	protected void addMajorEntriesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FileBlock_copyGrantsHavingRoles_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FileBlock_copyGrantsHavingRoles_feature", "_UI_FileBlock_type"),
-				 CrosswalkPackage.Literals.FILE_BLOCK__COPY_GRANTS_HAVING_ROLES,
+				 getString("_UI_MajorBlock_majorEntries_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MajorBlock_majorEntries_feature", "_UI_MajorBlock_type"),
+				 CrosswalkPackage.Literals.MAJOR_BLOCK__MAJOR_ENTRIES,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This returns FileBlock.gif.
+	 * This adds a property descriptor for the Name Element feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNameElementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MajorBlock_nameElement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MajorBlock_nameElement_feature", "_UI_MajorBlock_type"),
+				 CrosswalkPackage.Literals.MAJOR_BLOCK__NAME_ELEMENT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns MajorBlock.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FileBlock"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MajorBlock"));
 	}
 
 	/**
@@ -192,10 +175,10 @@ public class FileBlockItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FileBlock)object).getName();
+		String label = ((MajorBlock)object).getLabel();
 		return label == null || label.length() == 0 ?
-			getString("_UI_FileBlock_type") :
-			getString("_UI_FileBlock_type") + " " + label;
+			getString("_UI_MajorBlock_type") :
+			getString("_UI_MajorBlock_type") + " " + label;
 	}
 
 	/**
@@ -209,11 +192,9 @@ public class FileBlockItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FileBlock.class)) {
-			case CrosswalkPackage.FILE_BLOCK__USAGE:
-			case CrosswalkPackage.FILE_BLOCK__LABEL:
-			case CrosswalkPackage.FILE_BLOCK__DEFAULT_ACCESS:
-			case CrosswalkPackage.FILE_BLOCK__COPY_GRANTS_HAVING_ROLES:
+		switch (notification.getFeatureID(MajorBlock.class)) {
+			case CrosswalkPackage.MAJOR_BLOCK__LABEL:
+			case CrosswalkPackage.MAJOR_BLOCK__SELECTED_MAJOR_INDEX:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -230,6 +211,17 @@ public class FileBlockItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return CrosswalkEditPlugin.INSTANCE;
 	}
 
 }

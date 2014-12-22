@@ -460,6 +460,29 @@ public class CrosswalkItemProviderAdapterFactory extends CrosswalkAdapterFactory
 	}
 
 								/**
+	 * This keeps track of the one adapter used for all {@link crosswalk.EmailInputField} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EmailInputFieldItemProvider emailInputFieldItemProvider;
+
+								/**
+	 * This creates an adapter for a {@link crosswalk.EmailInputField}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEmailInputFieldAdapter() {
+		if (emailInputFieldItemProvider == null) {
+			emailInputFieldItemProvider = new EmailInputFieldItemProvider(this);
+		}
+
+		return emailInputFieldItemProvider;
+	}
+
+								/**
 	 * This keeps track of the one adapter used for all {@link crosswalk.EditingContainer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -503,6 +526,52 @@ public class CrosswalkItemProviderAdapterFactory extends CrosswalkAdapterFactory
 		}
 
 		return formItemProvider;
+	}
+
+								/**
+	 * This keeps track of the one adapter used for all {@link crosswalk.MajorBlock} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MajorBlockItemProvider majorBlockItemProvider;
+
+								/**
+	 * This creates an adapter for a {@link crosswalk.MajorBlock}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMajorBlockAdapter() {
+		if (majorBlockItemProvider == null) {
+			majorBlockItemProvider = new MajorBlockItemProvider(this);
+		}
+
+		return majorBlockItemProvider;
+	}
+
+								/**
+	 * This keeps track of the one adapter used for all {@link crosswalk.MajorEntry} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MajorEntryItemProvider majorEntryItemProvider;
+
+								/**
+	 * This creates an adapter for a {@link crosswalk.MajorEntry}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMajorEntryAdapter() {
+		if (majorEntryItemProvider == null) {
+			majorEntryItemProvider = new MajorEntryItemProvider(this);
+		}
+
+		return majorEntryItemProvider;
 	}
 
 								/**

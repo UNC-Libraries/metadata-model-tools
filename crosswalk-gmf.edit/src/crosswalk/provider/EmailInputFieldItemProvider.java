@@ -1,23 +1,10 @@
 /**
- * Copyright 2010 The University of North Carolina at Chapel Hill
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
  */
 package crosswalk.provider;
 
 
 import crosswalk.CrosswalkPackage;
-import crosswalk.DateInputField;
+import crosswalk.EmailInputField;
 
 import java.util.Collection;
 import java.util.List;
@@ -36,13 +23,13 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link crosswalk.DateInputField} object.
+ * This is the item provider adapter for a {@link crosswalk.EmailInputField} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DateInputFieldItemProvider
-	extends InputFieldItemProvider
+public class EmailInputFieldItemProvider
+	extends TextInputFieldItemProvider
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -55,7 +42,7 @@ public class DateInputFieldItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DateInputFieldItemProvider(AdapterFactory adapterFactory) {
+	public EmailInputFieldItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -70,48 +57,25 @@ public class DateInputFieldItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDatePrecisionPropertyDescriptor(object);
-			addBlankDefaultDatePropertyDescriptor(object);
+			addProvidesEmailDepositNoticeToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Date Precision feature.
+	 * This adds a property descriptor for the Provides Email Deposit Notice To feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDatePrecisionPropertyDescriptor(Object object) {
+	protected void addProvidesEmailDepositNoticeToPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_DateInputField_datePrecision_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DateInputField_datePrecision_feature", "_UI_DateInputField_type"),
-				 CrosswalkPackage.Literals.DATE_INPUT_FIELD__DATE_PRECISION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Blank Default Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBlankDefaultDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DateInputField_blankDefaultDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DateInputField_blankDefaultDate_feature", "_UI_DateInputField_type"),
-				 CrosswalkPackage.Literals.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE,
+				 getString("_UI_EmailInputField_providesEmailDepositNoticeTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EmailInputField_providesEmailDepositNoticeTo_feature", "_UI_EmailInputField_type"),
+				 CrosswalkPackage.Literals.EMAIL_INPUT_FIELD__PROVIDES_EMAIL_DEPOSIT_NOTICE_TO,
 				 true,
 				 false,
 				 false,
@@ -121,14 +85,14 @@ public class DateInputFieldItemProvider
 	}
 
 	/**
-	 * This returns DateInputField.gif.
+	 * This returns EmailInputField.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/DateInputField"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/EmailInputField"));
 	}
 
 	/**
@@ -139,10 +103,10 @@ public class DateInputFieldItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((DateInputField)object).getLabel();
+		String label = ((EmailInputField)object).getLabel();
 		return label == null || label.length() == 0 ?
-			getString("_UI_DateInputField_type") :
-			getString("_UI_DateInputField_type") + " " + label;
+			getString("_UI_EmailInputField_type") :
+			getString("_UI_EmailInputField_type") + " " + label;
 	}
 
 	/**
@@ -156,9 +120,8 @@ public class DateInputFieldItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DateInputField.class)) {
-			case CrosswalkPackage.DATE_INPUT_FIELD__DATE_PRECISION:
-			case CrosswalkPackage.DATE_INPUT_FIELD__BLANK_DEFAULT_DATE:
+		switch (notification.getFeatureID(EmailInputField.class)) {
+			case CrosswalkPackage.EMAIL_INPUT_FIELD__PROVIDES_EMAIL_DEPOSIT_NOTICE_TO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
