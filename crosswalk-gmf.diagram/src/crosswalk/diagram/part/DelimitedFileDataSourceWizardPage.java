@@ -23,6 +23,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.WizardPage;
@@ -41,11 +43,18 @@ import org.mozilla.universalchardet.UniversalDetector;
 
 /**
  * @author Gregory Jansen
- *
+ * 
  */
-public class DelimitedFileDataSourceWizardPage extends WizardPage implements IWizardPage {
+public class DelimitedFileDataSourceWizardPage extends WizardPage implements
+		IWizardPage {
 
-	private static String[] charsets = Charset.availableCharsets().keySet().toArray(new String[] {});
+	private static List<String> charsets = new ArrayList<String>();
+	
+	static {
+		for(String key : Charset.availableCharsets().keySet()) {
+			charsets.add(key);
+		}
+	}
 
 	private UniversalDetector detector = new UniversalDetector(null);
 
@@ -69,12 +78,18 @@ public class DelimitedFileDataSourceWizardPage extends WizardPage implements IWi
 
 	/*
 	 * (non-Javadoc)
-	 *
-	 * @see org.eclipse.jface.dialogs.IDialogPage#createControl(org.eclipse.swt.widgets .Composite)
+	 * 
+	 * @see
+	 * org.eclipse.jface.dialogs.IDialogPage#createControl(org.eclipse.swt.widgets
+	 * .Composite)
 	 */
 	@Override
 	public void createControl(Composite parent) {
 		initializeDialogUnits(parent);
+
+    	this.setTitle("Select Text File");
+    	this.setMessage("Choose your delimited text file.");
+    	
 		// top level group
 		Composite topLevel = new Composite(parent, SWT.NONE);
 		topLevel.setLayout(new GridLayout(3, false));
@@ -113,8 +128,9 @@ public class DelimitedFileDataSourceWizardPage extends WizardPage implements IWi
 		Label encodingL = new Label(topLevel, SWT.None);
 		encodingL.setText("Character Set");
 		charsetCombo = new Combo(topLevel, SWT.DROP_DOWN | SWT.READ_ONLY);
-		charsetCombo.setItems(charsets);
-		charsetCombo.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1));
+		charsetCombo.setItems(charsets.toArray(new String[] {}));
+		charsetCombo.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false,
+				false, 2, 1));
 		charsetCombo.addSelectionListener(new SelectionAdapter() {
 
 			@Override
@@ -132,7 +148,8 @@ public class DelimitedFileDataSourceWizardPage extends WizardPage implements IWi
 		Label lsample = new Label(topLevel, SWT.None);
 		lsample.setText("Text Preview");
 		lsample.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-		sampleText = new Text(topLevel, SWT.MULTI | SWT.READ_ONLY | SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL);
+		sampleText = new Text(topLevel, SWT.MULTI | SWT.READ_ONLY | SWT.BORDER
+				| SWT.V_SCROLL | SWT.H_SCROLL);
 		GridData gd = new GridData(GridData.FILL_BOTH);
 		gd.horizontalSpan = 3;
 		sampleText.setLayoutData(gd);
@@ -151,10 +168,13 @@ public class DelimitedFileDataSourceWizardPage extends WizardPage implements IWi
 		if (filePath != null && charset != null) {
 			BufferedReader sr = null;
 			try {
-				sr = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), charset));
+				sr = new BufferedReader(new InputStreamReader(
+						new FileInputStream(filePath), charset));
 				StringBuilder sb = new StringBuilder();
 				for (int i = 0; i < 15; i++) {
-					sb.append(sr.readLine());
+					String line = sr.readLine();
+					if(line == null) break;
+					sb.append(line);
 					sb.append("\n");
 				}
 				sampleText.setText(sb.toString());
@@ -191,30 +211,20 @@ public class DelimitedFileDataSourceWizardPage extends WizardPage implements IWi
 			}
 			detector.dataEnd();
 			String encoding = detector.getDetectedCharset();
-			if (encoding != null) {
-				System.out.println("Detected encoding = " + encoding);
-			} else {
-				System.out.println("No encoding detected.");
-			}
 			detector.reset();
-			int index = -1;
-			for (int i = 0; i < this.charsets.length; i++) {
-				if (this.charsets[i].equals(encoding)) {
-					index = i;
-					this.charset = encoding;
-					break;
-				}
+			int index = this.charsets.indexOf(encoding);
+			if(index == -1) {
+				index = this.charsets.indexOf(Charset.defaultCharset().name());
 			}
-			if (index > -1) {
-				this.charsetCombo.select(index);
-			}
+			this.charsetCombo.select(index);
+			this.charset = this.charsets.get(index);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			if(fis != null) {
+			if (fis != null) {
 				try {
 					fis.close();
-				} catch(Exception e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
