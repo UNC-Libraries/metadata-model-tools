@@ -1736,13 +1736,21 @@ public interface CrosswalkPackage extends EPackage {
 	int FORM__LOGO = EDITABLE_FEATURE_COUNT + 13;
 
 								/**
+	 * The feature id for the '<em><b>Agreement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__AGREEMENT = EDITABLE_FEATURE_COUNT + 14;
+								/**
 	 * The number of structural features of the '<em>Form</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORM_FEATURE_COUNT = EDITABLE_FEATURE_COUNT + 14;
+	int FORM_FEATURE_COUNT = EDITABLE_FEATURE_COUNT + 15;
 
 								/**
 	 * The meta object id for the '{@link crosswalk.FormElement <em>Form Element</em>}' class.
@@ -3389,6 +3397,17 @@ public interface CrosswalkPackage extends EPackage {
 	EAttribute getForm_Logo();
 
 								/**
+	 * Returns the meta object for the attribute '{@link crosswalk.Form#getAgreement <em>Agreement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Agreement</em>'.
+	 * @see crosswalk.Form#getAgreement()
+	 * @see #getForm()
+	 * @generated
+	 */
+	EAttribute getForm_Agreement();
+
+								/**
 	 * Returns the meta object for class '{@link crosswalk.MajorBlock <em>Major Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4701,6 +4720,14 @@ public interface CrosswalkPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FORM__LOGO = eINSTANCE.getForm_Logo();
+
+																/**
+		 * The meta object literal for the '<em><b>Agreement</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORM__AGREEMENT = eINSTANCE.getForm_Agreement();
 
 																/**
 		 * The meta object literal for the '{@link crosswalk.impl.MajorBlockImpl <em>Major Block</em>}' class.

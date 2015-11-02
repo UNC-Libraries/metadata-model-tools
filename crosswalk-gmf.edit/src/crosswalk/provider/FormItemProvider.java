@@ -88,6 +88,7 @@ public class FormItemProvider
 			addContactNamePropertyDescriptor(object);
 			addContactEmailPropertyDescriptor(object);
 			addLogoPropertyDescriptor(object);
+			addAgreementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -326,6 +327,28 @@ public class FormItemProvider
 				 getString("_UI_Form_logo_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Form_logo_feature", "_UI_Form_type"),
 				 CrosswalkPackage.Literals.FORM__LOGO,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Agreement feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAgreementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Form_agreement_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Form_agreement_feature", "_UI_Form_type"),
+				 CrosswalkPackage.Literals.FORM__AGREEMENT,
 				 true,
 				 false,
 				 false,

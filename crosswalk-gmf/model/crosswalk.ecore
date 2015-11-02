@@ -233,6 +233,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contactEmail" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="logo" eType="#//URI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="agreement" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MajorBlock" eSuperTypes="#//FormElement">
     <eOperations name="getSelectedMajor" eType="#//MajorEntry"/>
