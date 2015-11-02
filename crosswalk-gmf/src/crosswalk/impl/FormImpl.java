@@ -59,6 +59,7 @@ import java.net.URI;
  *   <li>{@link crosswalk.impl.FormImpl#getContactName <em>Contact Name</em>}</li>
  *   <li>{@link crosswalk.impl.FormImpl#getContactEmail <em>Contact Email</em>}</li>
  *   <li>{@link crosswalk.impl.FormImpl#getLogo <em>Logo</em>}</li>
+ *   <li>{@link crosswalk.impl.FormImpl#getAgreement <em>Agreement</em>}</li>
  * </ul>
  * </p>
  *
@@ -331,6 +332,26 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * @ordered
 	 */
 	protected URI logo = LOGO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAgreement() <em>Agreement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAgreement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AGREEMENT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAgreement() <em>Agreement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAgreement()
+	 * @generated
+	 * @ordered
+	 */
+	protected String agreement = AGREEMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -700,6 +721,27 @@ public class FormImpl extends EObjectImpl implements Form {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getAgreement() {
+		return agreement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAgreement(String newAgreement) {
+		String oldAgreement = agreement;
+		agreement = newAgreement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CrosswalkPackage.FORM__AGREEMENT, oldAgreement, agreement));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -747,6 +789,8 @@ public class FormImpl extends EObjectImpl implements Form {
 				return getContactEmail();
 			case CrosswalkPackage.FORM__LOGO:
 				return getLogo();
+			case CrosswalkPackage.FORM__AGREEMENT:
+				return getAgreement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -806,6 +850,9 @@ public class FormImpl extends EObjectImpl implements Form {
 			case CrosswalkPackage.FORM__LOGO:
 				setLogo((URI)newValue);
 				return;
+			case CrosswalkPackage.FORM__AGREEMENT:
+				setAgreement((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -860,6 +907,9 @@ public class FormImpl extends EObjectImpl implements Form {
 			case CrosswalkPackage.FORM__LOGO:
 				setLogo(LOGO_EDEFAULT);
 				return;
+			case CrosswalkPackage.FORM__AGREEMENT:
+				setAgreement(AGREEMENT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -900,6 +950,8 @@ public class FormImpl extends EObjectImpl implements Form {
 				return isSetContactEmail();
 			case CrosswalkPackage.FORM__LOGO:
 				return LOGO_EDEFAULT == null ? logo != null : !LOGO_EDEFAULT.equals(logo);
+			case CrosswalkPackage.FORM__AGREEMENT:
+				return AGREEMENT_EDEFAULT == null ? agreement != null : !AGREEMENT_EDEFAULT.equals(agreement);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -972,6 +1024,8 @@ public class FormImpl extends EObjectImpl implements Form {
 		if (contactEmailESet) result.append(contactEmail); else result.append("<unset>");
 		result.append(", logo: ");
 		result.append(logo);
+		result.append(", agreement: ");
+		result.append(agreement);
 		result.append(')');
 		return result.toString();
 	}
