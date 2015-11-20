@@ -39,6 +39,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link crosswalk.Form#getContactName <em>Contact Name</em>}</li>
  *   <li>{@link crosswalk.Form#getContactEmail <em>Contact Email</em>}</li>
  *   <li>{@link crosswalk.Form#getLogo <em>Logo</em>}</li>
+ *   <li>{@link crosswalk.Form#getAgreement <em>Agreement</em>}</li>
  * </ul>
  * </p>
  *
@@ -390,5 +391,31 @@ public interface Form extends Editable, ContextProvider {
 	 * @generated
 	 */
 	void setLogo(URI value);
+
+	/**
+	 * Returns the value of the '<em><b>Agreement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Agreement</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Agreement</em>' attribute.
+	 * @see #setAgreement(String)
+	 * @see crosswalk.CrosswalkPackage#getForm_Agreement()
+	 * @model
+	 * @generated
+	 */
+	String getAgreement();
+
+	/**
+	 * Sets the value of the '{@link crosswalk.Form#getAgreement <em>Agreement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Agreement</em>' attribute.
+	 * @see #getAgreement()
+	 * @generated
+	 */
+	void setAgreement(String value);
 
 } // Form
